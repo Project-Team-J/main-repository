@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `users`
 --
-
+CREATE DATABASE IF NOT EXISTS `projectj` ;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(15) NOT NULL,

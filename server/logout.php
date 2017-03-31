@@ -1,6 +1,6 @@
 <?php
 	require_once('session.php');
-	require_once('class.user.php');
+	require_once('User.php');
 	$user_logout = new USER();
 	
 	if($user_logout->is_loggedin()!="")
@@ -12,3 +12,4 @@
 		$user_logout->doLogout();
 		$user_logout->redirect('index.php');
 	}
+?>

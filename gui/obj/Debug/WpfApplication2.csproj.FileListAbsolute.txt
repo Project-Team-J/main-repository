@@ -20,6 +20,8 @@ C:\Users\Reouven Bentolila\Desktop\Project\main-repository\gui\bin\Debug\WpfAppl
 C:\Users\Reouven Bentolila\Desktop\Project\main-repository\gui\obj\Debug\WpfApplication2.exe
 C:\Users\Reouven Bentolila\Desktop\Project\main-repository\gui\obj\Debug\WpfApplication2.pdb
 C:\projectj\main-repository\gui\bin\Debug\WpfApplication2.exe.config
+C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.exe
+C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.pdb
 C:\projectj\main-repository\gui\bin\Debug\WpfApplication2.exe
 C:\projectj\main-repository\gui\bin\Debug\WpfApplication2.pdb
 C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
@@ -35,5 +37,4 @@ C:\projectj\main-repository\gui\obj\Debug\Window2.baml
 C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.g.resources
 C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.Properties.Resources.resources
 C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
-C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.exe
-C:\projectj\main-repository\gui\obj\Debug\WpfApplication2.pdb
+C:\projectj\main-repository\gui\bin\Debug\projectj.exe.config
