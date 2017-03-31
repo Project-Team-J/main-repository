@@ -39,7 +39,7 @@ namespace WpfApplication2
             UserInfo.Add("user_pass", user_pass.Text);
            
 
-            byte[] InsertUser = client.UploadValues("http://localhost/Project%20j/New%20folder/sign-up.php", "POST", UserInfo);
+            erverbyte[] InsertUser = client.UploadValues("http://localhost/Projectj/server/sign-up.php", "POST", UserInfo);
             client.Headers.Add("Content-Type","binary/octet-stream");
            
             Console.WriteLine(InsertUser);

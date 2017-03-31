@@ -1,0 +1,7 @@
+C:\projectj\main-repository\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\projectj\main-repository\obj\Debug\MainWindow.g.cs
+C:\projectj\main-repository\obj\Debug\Window1.g.cs
+C:\projectj\main-repository\obj\Debug\Window2.g.cs
+C:\projectj\main-repository\obj\Debug\App.g.cs
+C:\projectj\main-repository\obj\Debug\WpfApplication2_MarkupCompile.cache
+C:\projectj\main-repository\obj\Debug\WpfApplication2_MarkupCompile.lref
