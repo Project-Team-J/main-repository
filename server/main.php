@@ -8,6 +8,7 @@
  */
 class Main
 {
+    var $msg = "";
     function __construct(){
     }
 
@@ -24,18 +25,22 @@ class Main
 //        }
         if(isset($_POST['login']))
         {
-            $uname = strip_tags($_POST['txt_uname_email']);
-            $umail = strip_tags($_POST['txt_uname_email']);
-            $upass = strip_tags($_POST['txt_password']);
-            if($login->doLogin($uname,$umail,$upass))
-            {
-//                $login->redirect('home.php');
-
+            $uname = strip_tags($_POST['username']);
+            $umail = strip_tags($_POST['username']);
+            $upass = strip_tags($_POST['password']);
+            if(preg_match("/[\W]+/", $uname) || strlen($uname) == 0) {
+                $this->msg = $this->msg . "invalid username!";
             }
-            else
-            {
-                $error = "Wrong Details !";
+            echo $this->msg;
+            if ($this->msg=="") {
+                if ($login->doLogin($uname, $umail, $upass)) {
+                    echo "login successfully!";
+                }
+                else {
+                    echo "Wrong Details!";
+                }
             }
+            $this->msg = "";
         }
         if(isset($_POST['register'])) {
             $uname = trim($_POST['user_name']);
@@ -43,7 +48,22 @@ class Main
             $upass = trim($_POST['user_pass']);
             if (isset ($_POST['user_name']) && isset($_POST['user_mail']) && isset($_POST['user_pass']))
             {
-                $login->register($uname, $umail, $upass);
+                if(preg_match("/[\W]+/", $uname) || strlen($uname) == 0) {
+                    $this->msg = $this->msg . "invalid username!";
+                }
+                if (filter_var($umail, FILTER_VALIDATE_EMAIL) === false || strlen($umail) > 60) {
+                    $this->msg = $this->msg . "invalid email!";
+                }
+                echo $this->msg;
+                if ($this->msg == "") {
+                    $login->register($uname, $umail, $upass);
+                    echo "register successfully!";
+                }
+                $this->msg = null;
+            }
+            else
+            {
+                echo "register failed!";
             }
         }
     }

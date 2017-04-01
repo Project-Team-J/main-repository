@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="J-Widgets" Height="350" Width="525" Background="Black">
     <Grid Margin="2,2,-2,-2.2">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="55,59,0,0" TextWrapping="Wrap" Text="Full Name" Foreground="White" FontSize="18" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="55,59,0,0" TextWrapping="Wrap" Text="Username" Foreground="White" FontSize="18" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="53,151,0,0" TextWrapping="Wrap" Text="Password" Foreground="White" FontSize="18" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
@@ -25,6 +25,7 @@
         <TextBlock x:Name="Header" HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="Register" Foreground="White" FontSize="30" VerticalAlignment="Top" Height="45" Width="191"/>
         <Button x:Name="login" Content="Log in" Click="login_Click" HorizontalAlignment="Left" Margin="55,257,0,0" VerticalAlignment="Top" Width="75"/>
         <PasswordBox x:Name="user_pass" HorizontalAlignment="Left" Margin="170,156,0,0" VerticalAlignment="Top" Width="250" Height="25"/>
+        <Label x:Name="Label_message" HorizontalAlignment="Left" Height="66" Margin="55,186,0,0" VerticalAlignment="Top" Width="437" Content="" Background="Black" Foreground="Red" BorderThickness="0" RenderTransformOrigin="0.5,0.5" FontSize="15"/>
 
     </Grid>
 </Window>

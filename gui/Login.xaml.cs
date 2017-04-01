@@ -24,6 +24,7 @@ namespace ProjectJ
     public partial class Login : Window
     {
         WebClient client = new WebClient();
+        WebException x;
         public Login()
         {
             this.Left = 450;
@@ -40,15 +41,39 @@ namespace ProjectJ
 
         private void Log_in_Click(object sender, RoutedEventArgs e)
         {
-            NameValueCollection UserInfo = new NameValueCollection();
-            UserInfo.Add("login", UserMail.Text);
-            UserInfo.Add("UserMail", UserMail.Text);
-            UserInfo.Add("UserPassword", UserPassword.Password);
-            byte[] InsertUser = client.UploadValues("http://localhost/", "POST", UserInfo);
-            client.Headers.Add("Content-Type", "binary/octet-stream");
-            Widgets wid = new Widgets();
-            Close();
-            wid.Show();
+                NameValueCollection UserInfo = new NameValueCollection();
+                UserInfo.Add("login", "");
+                UserInfo.Add("username", UserMail.Text);
+                UserInfo.Add("password", UserPassword.Password);
+                byte[] login = client.UploadValues("http://localhost/", "POST", UserInfo);
+                var responseString = Encoding.Default.GetString(login);
+                responseString = responseString.Replace("\r", "").Replace("\n", "");
+                Label_message.Content = responseString;
+                switch (responseString)
+                {
+                    case "login successfully!":
+                        {
+                            Widgets wid = new Widgets();
+                            Close();
+                            wid.Show();
+                            break;
+                        }
+                    case "Wrong Details!":
+                        {
+                            Label_message.Content = "Wrong Details!";
+                            break;
+                        }
+                    case "invalid username!":
+                        {
+                            Label_message.Content = "Invalid username! you can use letters, numbers and periods!";
+                            break;
+                        }
+                    default:
+                        {
+                            Label_message.Content = "Server error!";
+                            break;
+                        }
+                }
         }
     }
    

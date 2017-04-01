@@ -32,5 +32,12 @@ namespace ProjectJ
             dw.Show();
 
         }
+
+        private void Button_logout_Click(object sender, RoutedEventArgs e)
+        {
+            Login log = new Login();
+            Close();
+            log.Show();
+        }
     }
 }
