@@ -76,6 +76,16 @@ namespace ProjectJ
                         Label_message.Content = "Invalid username and email,\nYou can use letters, numbers and periods!";
                         break;
                     }
+                case "Sorry username already taken!":
+                    {
+                        Label_message.Content = "Sorry username already taken!";
+                        break;
+                    }
+                case "Sorry email id already taken!":
+                    {
+                        Label_message.Content = "Sorry email id already taken!";
+                        break;
+                    }
 
                 default:
                     {

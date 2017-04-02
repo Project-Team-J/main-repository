@@ -6,13 +6,14 @@ require_once('widgets/daily_word/DAILYWORD.php');
 class USER
 {
 	private $conn;
-	private $dw;
 	public function __construct()
 	{
 		$database = new Database();
 		$db = $database->dbConnection();
 		$this->conn = $db;
-		$dw = new DAILYWORD();
+    }
+    public function getConn(){
+	    return $this->conn;
     }
 	
 	public function runQuery($sql)
@@ -85,9 +86,5 @@ class USER
 		unset($_SESSION['user_session']);
 		return true;
 	}
-
-	public function getDw(){
-	    return $this->dw;
-    }
 }
 ?>

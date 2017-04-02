@@ -4,9 +4,10 @@
         Title="Daily Word" Height="306.818" Width="387.499">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="170" FontSize="30" FontWeight="Bold"><Run Text="Daily Word"/><LineBreak/><Run/></TextBlock>
-        <Label x:Name="Label_word" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,100,0,0" Height="42" Width="151" FontSize="25" FontFamily="Sitka Subheading"/>
-        <Image x:Name="Label_image" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="151" Margin="107,142,0,0"/>
+        <Label x:Name="Label_word" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,100,0,0" Height="42" Width="151" FontSize="25" FontFamily="Sitka Subheading"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="-273,222,0,-44.4" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="184,182,0,-4.4" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Image" HorizontalAlignment="Left" Height="126" Margin="107,142,0,0" VerticalAlignment="Top" Width="151"/>
 
     </Grid>
 </Window>

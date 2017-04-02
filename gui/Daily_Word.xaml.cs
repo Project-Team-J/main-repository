@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net;
+using System.Collections.Specialized;
 
 namespace ProjectJ
 {
@@ -23,11 +24,10 @@ namespace ProjectJ
         public Daily_Word()
         {
             InitializeComponent();
-            using (WebClient wc = new WebClient())
-            {
-                // need to change in server to oop.
-                Label_word.Content = wc.DownloadString("http://localhost/normalization/wordoftheday");
-            }
+            //using (WebClient client = new WebClient())
+            //{
+            //    //// need to change in server to oop.
+            //    //Label_word.Content = wc.DownloadString("http://localhost/normalization/wordoftheday");
         }
     }
 }

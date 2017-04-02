@@ -12,7 +12,7 @@ class DAILYWORD
     function __construct()
     {
         $this->word = $this->normalize('https://www.merriam-webster.com/word-of-the-day');
-        $this->image=$this->images($this->word);
+        $this->image = $this->images($this->word);
     }
     function normalize($url)
     {
@@ -39,6 +39,16 @@ class DAILYWORD
     function get_image()
     {
         return $this->image;
+    }
+    function run(){
+        if (isset($_POST['daily_word']) && isset($_POST['word']))
+        {
+            echo $this->get_word();
+        }
+        elseif (isset($_POST['daily_word']) && isset($_POST['image']))
+        {
+            echo $this->get_image();
+        }
     }
 }
 ?>

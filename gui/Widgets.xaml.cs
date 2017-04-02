@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +31,23 @@ namespace ProjectJ
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Daily_Word dw = new Daily_Word();
+            using (WebClient client = new WebClient())
+            {
+                NameValueCollection UserInfo = new NameValueCollection();
+                UserInfo.Add("daily_word", "");
+                UserInfo.Add("word", "");
+                byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                var responseString = Encoding.Default.GetString(response);
+                responseString = responseString.Replace("\r", "").Replace("\n", "");
+                dw.Label_word.Content = responseString;
+                UserInfo = new NameValueCollection();
+                UserInfo.Add("daily_word", "");
+                UserInfo.Add("image", "");
+                response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                responseString = Encoding.Default.GetString(response);
+                responseString = responseString.Replace("\r", "").Replace("\n", "");
+                //dw.Image.? = responseString;
+            }
             dw.Show();
 
         }
