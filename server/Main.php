@@ -74,6 +74,7 @@ class Main
                 echo "register failed!";
             }
         }
+
         $dw = new DAILYWORD();
         $dw-> run();
     }

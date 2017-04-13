@@ -47,9 +47,11 @@ class DAILYWORD
         }
         elseif (isset($_POST['daily_word']) && isset($_POST['image']))
         {
+
             echo $this->get_image();
         }
     }
+
 }
 ?>
 
