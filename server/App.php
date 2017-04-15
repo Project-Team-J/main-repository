@@ -6,15 +6,19 @@ class App
 {
     public $gClient;
 
-    function __construct()
+    function __construct(){
+        $this->gClient = new Client();
+    }
+
+    function setg_Client($uri)
     {
-        $this->gClient = new Client(['base_uri' => 'http://localhost/','timeout'  => 2.0,]);
+        $this->gClient = new Client(['base_uri' => $uri,'timeout'  => 2.0,]);
     }
 
     function getJsonData($URI)
     {
         $response = $this->gClient->request('GET', $URI);
         $body = $response->getBody();
-        return $body;
+        return $body->getContents();
     }
 }

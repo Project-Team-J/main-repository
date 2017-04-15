@@ -2,7 +2,7 @@
 
 require_once('Database.php');
 require_once('widgets/daily_word/DAILYWORD.php');
-
+require_once('widgets/translation/TRANSLATION.php');
 class USER
 {
 	private $conn;

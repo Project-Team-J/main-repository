@@ -1,0 +1,18 @@
+﻿<Window x:Class="ProjectJ.Translation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectJ"
+        mc:Ignorable="d"
+        Title="Translation" Height="389.164" Width="610.216">
+    <Grid Margin="0,0,3.4,-5.8">
+        <TextBox x:Name="trans" HorizontalAlignment="Left" Height="162" Margin="33,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="trans2" HorizontalAlignment="Left" Height="162" Margin="334,176,0,0" TextWrapping="Wrap" Text="text here" VerticalAlignment="Top" Width="242" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Translation" HorizontalAlignment="Left" Margin="225,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.311,0.749"/>
+        <RadioButton Content="Hebrew to English" HorizontalAlignment="Left" Margin="244,74,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" IsChecked="True"/>
+        <RadioButton Content="English to Hebrew" HorizontalAlignment="Left" Margin="244,94,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1"/>
+        <Button Content="translate" HorizontalAlignment="Left" Margin="244,130,0,0" VerticalAlignment="Top" Width="92" Height="41" FontWeight="Bold" Click="Button_Click" FontSize="20"/>
+
+    </Grid>
+</Window>

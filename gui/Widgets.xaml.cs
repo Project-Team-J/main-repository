@@ -57,9 +57,17 @@ namespace ProjectJ
 
         private void Button_logout_Click(object sender, RoutedEventArgs e)
         {
-            Login log = new Login();
-            Close();
-            log.Show();
+            //Login log = new Login();
+            //Close();
+            //log.Show();
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Translation ts = new Translation();
+            ts.Show();
         }
     }
 }

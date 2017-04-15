@@ -19,27 +19,17 @@ class Main
         require_once("App.php");
         $app = new App();
         $login = new USER();
-//        if($login->is_loggedin()!="")
-//        {
-//            $login->redirect('home.php');
-//        }
         if(isset($_POST['login'])) {
             $uname = strip_tags($_POST['username']);
             $umail = strip_tags($_POST['username']);
             $upass = strip_tags($_POST['password']);
-//            if(preg_match("/[\W]+/", $uname) || strlen($uname) == 0) {
-//                $this->msg = $this->msg . "invalid username!";
-//            }
-//            echo $this->msg;
-//            if ($this->msg=="") {
+
             if ($login->doLogin($uname, $umail, $upass)) {
                 echo "login successfully!";
             }
             else {
                 echo "Wrong Details!";
             }
-//            }
-//            $this->msg = "";
         }
         if(isset($_POST['register'])) {
             $uname = trim($_POST['user_name']);
@@ -74,9 +64,14 @@ class Main
                 echo "register failed!";
             }
         }
-
-        $dw = new DAILYWORD();
-        $dw-> run();
+        if(isset($_POST['daily_word'])) {
+            $dw = new DAILYWORD();
+            $dw->run();
+        }
+        if(isset($_POST['translation']) && isset($_POST['text']) && isset($_POST['lang'])) {
+            $ts = new TRANSLATION(strip_tags($_POST['text']), strip_tags($_POST['lang']));
+            $ts->run();
+        }
     }
 }
 ?>
