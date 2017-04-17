@@ -41,7 +41,7 @@ namespace ProjectJ
                 {
                     UserInfo.Add("text", trans2.Text);
                     byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
-                    var responseString = Encoding.UTF8.GetString(response);
+                    String responseString = Encoding.UTF8.GetString(response);
                     responseString = responseString.Replace("[", "").Replace("]", "");
                     dynamic stuff = JsonConvert.DeserializeObject(responseString);
                     trans.Text = stuff.text;

@@ -15,7 +15,7 @@ class TRANSLATION
     private $text;
 
 
-    function __construct(string $text, string $lang)
+    function __construct($text, $lang)
     {
         $this->app = new App();
         $this->text = $text;
@@ -64,7 +64,8 @@ class TRANSLATION
     }
 
     function run(){
-            echo $this->getData();
+
+    echo $this->getData();
     }
 
 }

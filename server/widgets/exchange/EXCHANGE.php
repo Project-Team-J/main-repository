@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: Reouven Bentolila
+ * Date: 15-Apr-17
+ * Time: 7:16 PM
+ */
+class EXCHANGE
+{
+
+    private $app;
+    private $data;
+    private $from;
+    private $to;
+    private $amount;
+
+
+    function __construct($from, $to, $amount)
+    {
+        $this->app = new App();
+
+        $this->amount = $amount;
+        $this->from = $from;
+        $this->to = $to;
+        $this->app->setg_Client('https://api.fixer.io/');
+        $this->data = $this->app->getJsonData('latest?base='.$this->from.'');
+        $this->data = (array)json_decode($this->data);
+
+        if ($to=='ILS')
+        {
+            $rate = $this->data['rates']->ILS;
+        }
+        elseif ($to=='EUR')
+        {
+            $rate = $this->data['rates']->EUR;
+
+        }
+        elseif ($to=='USD')
+        {
+            $rate = $this->data['rates']->EUR;
+        }
+        $result = $amount*$rate;
+        $this->data = json_encode(array('result' => (string)$result));
+
+
+
+    }
+
+
+    public function getamount()
+    {
+        return $this->amount;
+    }
+
+
+    public function setfrom($from)
+    {
+        $this->from = $from;
+    }
+    public function setto($to)
+    {
+        $this->to = $to;
+    }
+
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
+
+    function getData()
+    {
+        return $this->data;
+    }
+
+    function run(){
+
+        echo $this->getData();
+    }
+}

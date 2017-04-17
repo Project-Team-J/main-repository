@@ -69,5 +69,11 @@ namespace ProjectJ
             Translation ts = new Translation();
             ts.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Exchange ex = new Exchange();
+            ex.Show();
+        }
     }
 }

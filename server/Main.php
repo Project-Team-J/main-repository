@@ -69,9 +69,14 @@ class Main
             $dw->run();
         }
         if(isset($_POST['translation']) && isset($_POST['text']) && isset($_POST['lang'])) {
-            $ts = new TRANSLATION(strip_tags($_POST['text']), strip_tags($_POST['lang']));
+            $ts = new TRANSLATION($_POST['text'], $_POST['lang']);
             $ts->run();
         }
+        if(isset($_POST['exchange']) && isset($_POST['amount']) && isset($_POST['to']) && isset($_POST['from'])) {
+            $ex = new EXCHANGE($_POST['from'], $_POST['to'], $_POST['amount']);
+            $ex->run();
+        }
+
     }
 }
 ?>

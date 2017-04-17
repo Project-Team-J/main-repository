@@ -61,6 +61,9 @@
     <Compile Include="Daily_Word.xaml.cs">
       <DependentUpon>Daily_Word.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exchange.xaml.cs">
+      <DependentUpon>Exchange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
       <DependentUpon>Widgets.xaml</DependentUpon>
     </Compile>
     <Page Include="Daily_Word.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exchange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

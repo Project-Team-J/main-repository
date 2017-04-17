@@ -1,0 +1,47 @@
+﻿<Window x:Class="ProjectJ.Exchange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectJ"
+        mc:Ignorable="d"
+        Title="Exchange" Height="389.164" Width="610.216" Background="Black">
+
+    <Grid Margin="0,0,5.2,-1.2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="156*"/>
+            <RowDefinition Height="390*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="192,8,0,0" TextWrapping="Wrap" Text="Currency Converter " Foreground="White" FontSize="25" VerticalAlignment="Top" Height="38" Width="231" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.287"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <ComboBox x:Name="comboBox1" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="78,32.4,0,0"  VerticalAlignment="Top" Width="180" Height="34" Grid.Row="1"  >
+            <ComboBoxItem Content="ILS" HorizontalAlignment="Left" FontSize="15" Width="116"  />
+            <ComboBoxItem Content="USD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="EUR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="326,32.4,0,0" VerticalAlignment="Top" Width="163" Height="34" Grid.Row="1">
+            <ComboBoxItem Content="ILS" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="USD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="EUR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+        </ComboBox>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="28,56,0,0" TextWrapping="Wrap" Text="Please choose currencies: " Foreground="White" FontSize="20" VerticalAlignment="Top" Height="37" Width="230"/>
+        <TextBlock x:Name="textBlock_Copya" HorizontalAlignment="Left" Margin="293,10.4,0,0" TextWrapping="Wrap" Text="To: " Foreground="White" FontSize="15" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="1"/>
+        <TextBlock x:Name="textBlock_Copya_Copy" HorizontalAlignment="Left" Margin="51,10.4,0,0" TextWrapping="Wrap" Text="Change: " Foreground="White" FontSize="15" VerticalAlignment="Top" Height="22" Width="76" Grid.Row="1" RenderTransformOrigin="0.883,0.945"/>
+        <Button x:Name="button" Content="convert" Click="button_Click" FontSize="15" HorizontalAlignment="Left" Margin="461,188.4,0,0" VerticalAlignment="Top" Width="96" Height="37" Grid.Row="1"/>
+        <TextBox x:Name="Amount" HorizontalAlignment="Left" Height="37" FontSize="17" Margin="164,98.4,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217"/>
+        <TextBlock x:Name="amountxt" HorizontalAlignment="Left" Margin="65,101.4,0,0" TextWrapping="Wrap" Text="Amount: " Foreground="White" FontSize="17" VerticalAlignment="Top" Height="21" Width="99" Grid.Row="1" RenderTransformOrigin="0.883,0.945"/>
+        <TextBox x:Name="result" HorizontalAlignment="Left" Height="35" Margin="164,154.4,0,0" Grid.Row="1" TextWrapping="Wrap" FontSize="13"  VerticalAlignment="Top" Width="217"/>
+        <TextBlock x:Name="amountxt_Copy" HorizontalAlignment="Left" Margin="65,157.4,0,0" TextWrapping="Wrap" Text="Result: " Foreground="White" FontSize="17" VerticalAlignment="Top" Height="32" Width="87" Grid.Row="1" RenderTransformOrigin="0.883,0.945"/>
+    </Grid>
+</Window>
