@@ -24,10 +24,7 @@ namespace ProjectJ
         public Daily_Word()
         {
             InitializeComponent();
-            //using (WebClient client = new WebClient())
-            //{
-            //    //// need to change in server to oop.
-            //    //Label_word.Content = wc.DownloadString("http://localhost/normalization/wordoftheday");
+    
         }
     }
 }

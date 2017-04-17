@@ -19,29 +19,24 @@ class EXCHANGE
     function __construct($from, $to, $amount)
     {
         $this->app = new App();
-
         $this->amount = $amount;
         $this->from = $from;
         $this->to = $to;
-        $this->app->setg_Client('https://api.fixer.io/');
-        $this->data = $this->app->getJsonData('latest?base='.$this->from.'');
-        $this->data = (array)json_decode($this->data);
+        if($this->to==$this->from)
+        {
+            $this->data = json_encode(array('result' => (string)$amount));
+        }
+        else
+        {
+            $this->app->setg_Client('https://api.fixer.io/');
+            $this->data = $this->app->getJsonData('latest?base='.$this->from.'');
+            $this->data = (array)json_decode($this->data);
+            $rate = $this->data['rates']->$to;
+            $result = $amount*$rate;
+            $this->data = json_encode(array('result' => (string)$result));
 
-        if ($to=='ILS')
-        {
-            $rate = $this->data['rates']->ILS;
-        }
-        elseif ($to=='EUR')
-        {
-            $rate = $this->data['rates']->EUR;
 
         }
-        elseif ($to=='USD')
-        {
-            $rate = $this->data['rates']->EUR;
-        }
-        $result = $amount*$rate;
-        $this->data = json_encode(array('result' => (string)$result));
 
 
 

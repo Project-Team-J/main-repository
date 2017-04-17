@@ -28,12 +28,21 @@
             <ComboBoxItem Content="ILS" HorizontalAlignment="Left" FontSize="15" Width="116"  />
             <ComboBoxItem Content="USD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
             <ComboBoxItem Content="EUR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="GBP" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="HKD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="JPY" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="INR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="HKD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
 
         </ComboBox>
         <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="326,32.4,0,0" VerticalAlignment="Top" Width="163" Height="34" Grid.Row="1">
             <ComboBoxItem Content="ILS" FontSize="15" HorizontalAlignment="Left" Width="116"/>
             <ComboBoxItem Content="USD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
             <ComboBoxItem Content="EUR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="GBP" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="HKD" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="JPY" FontSize="15" HorizontalAlignment="Left" Width="116"/>
+            <ComboBoxItem Content="INR" FontSize="15" HorizontalAlignment="Left" Width="116"/>
         </ComboBox>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="28,56,0,0" TextWrapping="Wrap" Text="Please choose currencies: " Foreground="White" FontSize="20" VerticalAlignment="Top" Height="37" Width="230"/>
         <TextBlock x:Name="textBlock_Copya" HorizontalAlignment="Left" Margin="293,10.4,0,0" TextWrapping="Wrap" Text="To: " Foreground="White" FontSize="15" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="1"/>
