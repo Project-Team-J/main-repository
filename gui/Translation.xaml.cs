@@ -15,6 +15,7 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Collections.Specialized;
 
+
 namespace ProjectJ
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace ProjectJ
     /// </summary>
     public partial class Translation : Window
     {
+
         private String dict = "en-he";
         public Translation()
         {
@@ -32,15 +34,15 @@ namespace ProjectJ
         {
             using (WebClient client = new WebClient())
             {
-                NameValueCollection UserInfo = new NameValueCollection();
-                UserInfo.Add("translation", "");
-                UserInfo.Add("lang", dict);
+                NameValueCollection translationCol = new NameValueCollection();
+                translationCol.Add("translation", "");
+                translationCol.Add("lang", dict);
                 if (trans2.Text == "")
                     trans.Text = "Please enter a text to translate --->";
                 else
                 {
-                    UserInfo.Add("text", trans2.Text);
-                    byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                    translationCol.Add("text", trans2.Text);
+                    byte[] response = client.UploadValues("http://localhost/", "POST", translationCol);
                     String responseString = Encoding.UTF8.GetString(response);
                     responseString = responseString.Replace("[", "").Replace("]", "");
                     dynamic stuff = JsonConvert.DeserializeObject(responseString);

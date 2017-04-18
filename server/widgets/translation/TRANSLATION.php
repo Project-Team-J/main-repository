@@ -64,8 +64,7 @@ class TRANSLATION
     }
 
     function run(){
-
-    echo $this->getData();
+        echo $this->getData();
     }
 
 }

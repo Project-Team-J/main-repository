@@ -27,32 +27,7 @@ namespace ProjectJ
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Daily_Word dw = new Daily_Word();
-            using (WebClient client = new WebClient())
-            {
-                NameValueCollection UserInfo = new NameValueCollection();
-                UserInfo.Add("daily_word", "");
-                UserInfo.Add("word", "");
-                byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
-                var responseString = Encoding.Default.GetString(response);
-                responseString = responseString.Replace("\r", "").Replace("\n", "");
-                dw.Label_word.Content = responseString;
-                UserInfo = new NameValueCollection();
-                UserInfo.Add("daily_word", "");
-                UserInfo.Add("image", "");
-                response = client.UploadValues("http://localhost/", "POST", UserInfo);
-                responseString = Encoding.Default.GetString(response);
-                responseString = responseString.Replace("\r", "").Replace("\n", "");
-                var fullFilePath = @responseString;
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.BeginInit();
-                bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);
-                bitmap.EndInit();
-                dw.Images.Source = bitmap;
-
-
-            }
             dw.Show();
-
         }
 
         private void Button_logout_Click(object sender, RoutedEventArgs e)

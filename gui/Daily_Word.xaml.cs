@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net;
 using System.Collections.Specialized;
+using System.Speech.Synthesis;
 
 namespace ProjectJ
 {
@@ -24,7 +25,34 @@ namespace ProjectJ
         public Daily_Word()
         {
             InitializeComponent();
-    
+
+            using (WebClient client = new WebClient())
+            {
+                NameValueCollection dailyWordCol = new NameValueCollection();
+                dailyWordCol.Add("daily_word", "");
+                dailyWordCol.Add("word", "");
+                byte[] response = client.UploadValues("http://localhost/", "POST", dailyWordCol);
+                var responseString = Encoding.Default.GetString(response);
+                responseString = responseString.Replace("\r", "").Replace("\n", "");
+                this.Label_word.Content = responseString;
+                dailyWordCol = new NameValueCollection();
+                dailyWordCol.Add("daily_word", "");
+                dailyWordCol.Add("image", "");
+                response = client.UploadValues("http://localhost/", "POST", dailyWordCol);
+                responseString = Encoding.Default.GetString(response);
+                responseString = responseString.Replace("\r", "").Replace("\n", "");
+                var fullFilePath = @responseString;
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);
+                bitmap.EndInit();
+                this.Images.Source = bitmap;
+            }
+        }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            SpeechSynthesizer s = new SpeechSynthesizer();
+            s.Speak((string)this.Label_word.Content);
         }
     }
 }
