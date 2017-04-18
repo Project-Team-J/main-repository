@@ -31,12 +31,9 @@ class EXCHANGE
             $this->app->setg_Client('https://api.fixer.io/');
             $this->data = $this->app->getJsonData('latest?base='.$this->from.'');
             $this->data = (array)json_decode($this->data);
-            echo $this->data['rates']->$to;
             $rate = $this->data['rates']->$to;
             $result = $amount*$rate;
             $this->data = json_encode(array('result' => (string)$result));
-
-
         }
 
 
