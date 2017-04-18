@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Collections.Specialized;
 using System.Speech.Synthesis;
+using Newtonsoft.Json;
 
 namespace ProjectJ
 {
@@ -30,18 +31,11 @@ namespace ProjectJ
             {
                 NameValueCollection dailyWordCol = new NameValueCollection();
                 dailyWordCol.Add("daily_word", "");
-                dailyWordCol.Add("word", "");
                 byte[] response = client.UploadValues("http://localhost/", "POST", dailyWordCol);
-                var responseString = Encoding.Default.GetString(response);
-                responseString = responseString.Replace("\r", "").Replace("\n", "");
-                this.Label_word.Content = responseString;
-                dailyWordCol = new NameValueCollection();
-                dailyWordCol.Add("daily_word", "");
-                dailyWordCol.Add("image", "");
-                response = client.UploadValues("http://localhost/", "POST", dailyWordCol);
-                responseString = Encoding.Default.GetString(response);
-                responseString = responseString.Replace("\r", "").Replace("\n", "");
-                var fullFilePath = @responseString;
+                String responseString = Encoding.UTF8.GetString(response);
+                dynamic stuff = JsonConvert.DeserializeObject(responseString);
+                this.Label_word.Content = (string)stuff.word;
+                String fullFilePath = @stuff.img;
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);

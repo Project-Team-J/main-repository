@@ -11,7 +11,7 @@
             <ColumnDefinition Width="72*"/>
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="31,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="170" FontSize="30" FontWeight="Bold" Grid.Column="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.465,0.493"><Run Text="Daily Word"/><LineBreak/><Run/></TextBlock>
-        <Label x:Name="Label_word" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,67,0,0" Height="36" Width="151" FontSize="25" FontFamily="Sitka Subheading" Grid.Column="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.455,-0.549"/>
+        <Label x:Name="Label_word" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,60,0,0" Height="52" Width="151" FontSize="25" FontFamily="Sitka Subheading" Grid.Column="2" Grid.ColumnSpan="2" RenderTransformOrigin="0.455,-0.549"/>
         <Image x:Name="Images" HorizontalAlignment="Right" Height="95" Margin="0,120,50.8,0" VerticalAlignment="Top" Width="151" Grid.Column="2" Grid.ColumnSpan="2"  >
 
 

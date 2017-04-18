@@ -9,22 +9,21 @@ class DAILYWORD
 {
     private $word;
     private $image;
+    private $data;
     function __construct()
     {
         $this->word = $this->normalize('https://www.merriam-webster.com/word-of-the-day');
         $this->image = $this->images($this->word);
+        $this->data = json_encode(array('word' => $this->word, 'img' => $this->image));
     }
     function normalize($url)
     {
         $page = @file_get_contents($url);
         if (!$page) return null;
         $matches = array();
-        if (preg_match('/<h1>(.*?)<\/h1>/', $page, $matches)) {
+        if (preg_match('/<h1>(.*?)<\/h1>/', $page, $matches))
             return $matches[1];
-        } else {
-            return null;
-        }
-        #create json
+        return null;
     }
     function images($word)
     {
@@ -32,26 +31,9 @@ class DAILYWORD
         preg_match_all( '|<img.*?src=[\'"](.*?)[\'"].*?>|i',$html, $matches );
         return $matches[ 1 ][ 2];
     }
-    function get_word()
-    {
-        return $this->word;
-    }
-    function get_image()
-    {
-        return $this->image;
-    }
     function run(){
-        if (isset($_POST['daily_word']) && isset($_POST['word']))
-        {
-            echo $this->get_word();
-        }
-        elseif (isset($_POST['daily_word']) && isset($_POST['image']))
-        {
-
-            echo $this->get_image();
-        }
+        echo $this->data;
     }
-
 }
 ?>
 
