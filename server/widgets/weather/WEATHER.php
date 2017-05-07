@@ -10,7 +10,6 @@ class WEATHER
 {
     private $app;
     private $data;
-    private $path;
 
     function __construct()
     {

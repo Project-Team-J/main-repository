@@ -13,6 +13,7 @@
         <Button Content="Translation" HorizontalAlignment="Left" Margin="319,149,0,0" VerticalAlignment="Top" Width="141" RenderTransformOrigin="-0.074,-1.24" Height="62" FontSize="20" Click="Button_Click_1"/>
         <Button Content="Currency Exchange" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="561,147,0,0" Height="62" Click="Button_Click_2" FontSize="16"/>
         <Button Content="Weather" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="319,270,0,0" Height="62" Click="Button_Click_3" FontSize="16"/>
+        <Button Content="To Do List" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="97,268,0,0" Height="62" Click="Button_Click_4" FontSize="16"/>
 
     </Grid>
 </Window>

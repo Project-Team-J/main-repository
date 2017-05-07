@@ -76,11 +76,14 @@ class Main
             $ex = new EXCHANGE($_POST['from'], $_POST['to'], $_POST['amount']);
             $ex->run();
         }
-        if(isset($_POST['weather'])){
+        if(isset($_POST['weather'])) {
             $we = new WEATHER();
             $we->run();
         }
-    
+        if (isset($_POST['TODO_LIST'])) {
+            $tl = new TODO_LIST($login->getId());
+            $tl->run();
+        }
     }
 }
 ?>

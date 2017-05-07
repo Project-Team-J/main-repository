@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add task.xaml.cs">
+      <DependentUpon>Add task.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Daily_Word.xaml.cs">
       <DependentUpon>Daily_Word.xaml</DependentUpon>
     </Compile>
@@ -67,6 +70,9 @@
     </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Todo list.xaml.cs">
+      <DependentUpon>Todo list.xaml</DependentUpon>
     </Compile>
     <Compile Include="Translation.xaml.cs">
       <DependentUpon>Translation.xaml</DependentUpon>
@@ -77,6 +83,10 @@
     <Compile Include="Widgets.xaml.cs">
       <DependentUpon>Widgets.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add task.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Daily_Word.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +110,10 @@
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Todo list.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Translation.xaml">
       <SubType>Designer</SubType>
