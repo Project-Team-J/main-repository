@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 using System.Collections.Specialized;
 using Microsoft.Win32;
 using Newtonsoft.Json;
-
 using System.Collections;
 
 
@@ -41,7 +40,7 @@ namespace ProjectJ
                 string getcombo2 = (comboBox2.SelectedItem as ComboBoxItem).Content.ToString();
 
                 WebClient client = new WebClient();
-                NameValueCollection UserInfo = new NameValueCollection();
+                NameValueCollection exchangeInfo = new NameValueCollection();
                 Boolean flag=true;
                 foreach (char c in Amount.Text)
                 {
@@ -55,11 +54,11 @@ namespace ProjectJ
 
             if (flag != false)
             {
-                UserInfo.Add("exchange", "");
-                UserInfo.Add("from", getcombo1);
-                UserInfo.Add("to", getcombo2);
-                UserInfo.Add("amount", Amount.Text);
-                byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                exchangeInfo.Add("exchange", "");
+                exchangeInfo.Add("from", getcombo1);
+                exchangeInfo.Add("to", getcombo2);
+                exchangeInfo.Add("amount", Amount.Text);
+                byte[] response = client.UploadValues("http://localhost/", "POST", exchangeInfo);
                 var responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 result.Text = stuff.result;

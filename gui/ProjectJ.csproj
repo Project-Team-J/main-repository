@@ -71,6 +71,9 @@
     <Compile Include="Translation.xaml.cs">
       <DependentUpon>Translation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Weather.xaml.cs">
+      <DependentUpon>Weather.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Widgets.xaml.cs">
       <DependentUpon>Widgets.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Translation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Weather.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

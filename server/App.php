@@ -5,7 +5,8 @@ use GuzzleHttp\Client;
 class App
 {
     public $gClient;
-
+    static protected $_instance = null;
+    
     function __construct(){
         $this->gClient = new Client();
     }
@@ -20,5 +21,13 @@ class App
         $response = $this->gClient->request('GET', $URI);
         $body = $response->getBody();
         return $body->getContents();
+    }
+    
+    public static function instance() {
+        if(!static::$_instance) {
+            static::$_instance = new App();
+        }
+        
+        return static::$_instance;
     }
 }

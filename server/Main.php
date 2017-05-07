@@ -76,6 +76,11 @@ class Main
             $ex = new EXCHANGE($_POST['from'], $_POST['to'], $_POST['amount']);
             $ex->run();
         }
+        if(isset($_POST['weather'])){
+            $we = new WEATHER();
+            $we->run();
+        }
+    
     }
 }
 ?>

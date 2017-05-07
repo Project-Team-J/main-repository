@@ -50,5 +50,11 @@ namespace ProjectJ
             Exchange ex = new Exchange();
             ex.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Weather we = new Weather();
+            we.Show();
+        }
     }
 }

@@ -4,6 +4,8 @@ require_once('Database.php');
 require_once('widgets/daily_word/DAILYWORD.php');
 require_once('widgets/translation/TRANSLATION.php');
 require_once('widgets/exchange/EXCHANGE.php');
+require_once('widgets/weather/WEATHER.php');
+
 class USER
 {
 	private $conn;
