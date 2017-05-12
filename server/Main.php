@@ -80,8 +80,14 @@ class Main
             $we = new WEATHER();
             $we->run();
         }
-        if (isset($_POST['TODO_LIST'])) {
-            $tl = new TODO_LIST($login->getId());
+        if (isset($_POST['todo_list'])) {
+           $tl = new TODO_LIST($login->getId());
+           // $tl = new TODO_LIST(2);
+           //echo $login->getId();
+           $tl->run();
+        }
+        if (isset($_GET['td'])){
+            $tl = new TODO_LIST(7);
             $tl->run();
         }
     }

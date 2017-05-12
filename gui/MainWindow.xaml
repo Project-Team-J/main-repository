@@ -1,0 +1,27 @@
+﻿<Window x:Class="MusicP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
+        Title="Music Player" Height="192.627" Width="415.254">
+    <Grid Height="222" VerticalAlignment="Top" Margin="0,0,0,-28" HorizontalAlignment="Left" Width="432">
+        <Image Source="http://www.jpost.com/HttpHandlers/ShowImage.ashx?ID=296630" Height="403" Margin="-336,-166,-167,-15" VerticalAlignment="Top"/>
+        <WebBrowser x:Name ="musicbrowser" Navigating="musicbrowser_navigating" HorizontalAlignment="Left" Height="1" Margin="-4,328,0,-1" VerticalAlignment="Top" Width="4" RenderTransformOrigin="0.5,0.5">
+            <WebBrowser.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </WebBrowser.RenderTransform>
+        </WebBrowser>
+        <Button x:Name="HouseB" Content="House" Background="AliceBlue" HorizontalAlignment="Left" Margin="42,47,0,0" VerticalAlignment="Top" Width="75" Click="HouseB_Click_1"/>
+        <Button x:Name="RockB"  Background="AliceBlue" Content="Rock" HorizontalAlignment="Left" Margin="162,47,0,0" VerticalAlignment="Top" Width="75" Click="RockB_Click"/>
+        <Button x:Name="HipHopB" Background="AliceBlue" Content="Hip-Hop" HorizontalAlignment="Left" Margin="286,46,0,0" Width="75" Height="21" VerticalAlignment="Top" Click="HipHopB_Click_1"/>
+        <TextBox x:Name="txtUrl" Background="AliceBlue" FontStyle="Oblique"  HorizontalAlignment="Left" Margin="23,10,0,186" TextWrapping="Wrap" Text="TextBox" Width="362" TextChanged="txtUrl_TextChanged"/>
+        <TextBox x:Name="YourMusic"  Background="Snow"  HorizontalAlignment="Left" Height="23" Margin="23,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="362" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="YTButton" Background="Aquamarine" Content="Play my YouTube" HorizontalAlignment="Left" Margin="42,112,0,0" VerticalAlignment="Top" Width="175" Click="YTButton_Click"/>
+        <Button x:Name="exit" Background="Yellow" Content="Exit" HorizontalAlignment="Left" Margin="286,133,0,0" VerticalAlignment="Top" Width="75" Click="exit_Click"/>
+
+    </Grid>
+</Window>

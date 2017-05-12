@@ -33,6 +33,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_pass` varchar(255) NOT NULL,
   `joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
+--   CREATE TABLE IF NOT EXISTS `todo_list` (
+--   `task_id` int(11) NOT NULL AUTO_INCREMENT,
+--     `user_id` int(11) NOT NULL,
+--   `task` varchar(255) NOT NULL,
+--   `task_date` date NOT NULL,
+--   `joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+--   PRIMARY KEY (`task_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

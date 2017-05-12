@@ -30,17 +30,25 @@ class TODO_LIST
     public function getTask($uid)
     {
         try {
-            $stmt = $this->conn->prepare("SELECT task,task_date FROM todo_list WHERE user_id=:uid ");
-            $stmt->execute(array(':uid' => $uid));
-            $rows = array();
-            while ($userRow = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                // $userRow['task_date'] = '' . $userRow['task_date'];
-                //$rows[] = $userRow;
-                echo json_encode($userRow);
+            $stmt=$this->conn->prepare("SELECT * FROM todo_list WHERE user_id='$uid'");
+            $stmt->execute(array());
+            if ($stmt) {
+                $str = "task";
+                $index = 1;
+                $arr = array();
+                while ($userRow = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $tmp = array('Task' => $userRow['task'], 'Date' => $userRow['task_date']);
+                    $f = $str . $index;
+                    $arr[$f] = $tmp;
+                    ++$index;
+                }
+                $arr['amount'] = $index-1;
+                echo json_encode($arr);
             }
+            else
+                echo "no tasks!";
 
         }
-
         catch(PDOException $e)
         {
             echo $e->getMessage();
@@ -64,7 +72,8 @@ class TODO_LIST
     }
 
     public function run(){
-        echo getTask($this->id);
+
+        $this->getTask(7);
         if (isset($_POST['add'])) {
             $task = trim($_POST['task']);
             $d = trim($_POST['date']);

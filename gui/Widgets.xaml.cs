@@ -62,5 +62,11 @@ namespace ProjectJ
             Todo_list td = new Todo_list();
             td.Show();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            MusicP mp = new MusicP();
+            mp.Show();
+        }
     }
 }

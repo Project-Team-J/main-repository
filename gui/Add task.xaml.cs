@@ -42,8 +42,7 @@ namespace ProjectJ
             todo_list.Add("date",d.ToString() );
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
             list.Add(new Task(task.Text,d));
-            Todo_list t1 = new Todo_list();
-            t1.Show();
+            this.Close();
             
         }
     }

@@ -35,11 +35,25 @@ namespace ProjectJ
                 byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
-                string t = (string)stuff.task;
-                DateTime d = stuff.task_date;
-                list.Add(new Task(t,d));
+                //string ttt = stuff.task1.Task;
+                string t = "task";
+                int x = 0;
+                Int32.TryParse(stuff.amount, out x);
+                for (int i = 1; i < x; ++i)
+                {
+                    string tmp = t + i.ToString();
+                    list.Add(new Task(stuff.tmp.Task, new DateTime(stuff.tmp.Date)));
+                }
                 list_task.Items.Add(list);
-                
+
+                //foreach (dynamic value in stuff)
+                //{
+                //    string tmp = t + i.ToString();
+                //    list.Add(new Task(stuff[tmp].Task, new DateTime(stuff[tmp].Date)));
+                //    ++i;
+                //}
+                //list_task.Items.Add(list);
+
             }
         }
 
