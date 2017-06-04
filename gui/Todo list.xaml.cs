@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -30,36 +31,31 @@ namespace ProjectJ
             InitializeComponent();
             using (client)
             {
-                
+
                 todo_list.Add("todo_list", "");
                 byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
-                //string ttt = stuff.task1.Task;
-                string t = "task";
-                int x = 0;
-                Int32.TryParse(stuff.amount, out x);
-                for (int i = 1; i < x; ++i)
+                int i = 1;
+                String t = "task";
+                int x = Convert.ToInt32(stuff.amount);
+                String tmp = null;
+                while (i <= x)
                 {
-                    string tmp = t + i.ToString();
-                    list.Add(new Task(stuff.tmp.Task, new DateTime(stuff.tmp.Date)));
+                    tmp = t + i.ToString();
+                    list.Add(new Task((string)stuff[tmp].Task, Convert.ToDateTime((string)stuff[tmp].Date)));
+                    list_task.Items.Add(list[i-1]);
+                    ++i;
                 }
-                list_task.Items.Add(list);
+                
 
-                //foreach (dynamic value in stuff)
-                //{
-                //    string tmp = t + i.ToString();
-                //    list.Add(new Task(stuff[tmp].Task, new DateTime(stuff[tmp].Date)));
-                //    ++i;
-                //}
-                //list_task.Items.Add(list);
 
             }
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            Add_task t1 = new Add_task(list);
+            Add_task t1 = new Add_task(list, todo_list);
             t1.Show();
             list_task.Items.Add(list);
             
@@ -68,10 +64,9 @@ namespace ProjectJ
         private void delete_Click(object sender, RoutedEventArgs e)
         {
             todo_list.Add("delete", "");
-            todo_list.Add("task", "test2");
+            todo_list.Add("task", "t");
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
             String responseString = Encoding.UTF8.GetString(response);
-            responseString = responseString.Replace("[", "").Replace("]", "");
             dynamic stuff = JsonConvert.DeserializeObject(responseString);
             list_task.Items.Add(list);
         }

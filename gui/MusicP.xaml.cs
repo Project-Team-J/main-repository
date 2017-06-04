@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,9 +24,14 @@ namespace ProjectJ
     /// </summary>
     public partial class MusicP : Window
     {
+        NameValueCollection music = new NameValueCollection();
+        WebClient client = new WebClient();
+        byte[] response;
+        String responseString;
         public MusicP()
         {
             InitializeComponent();
+            music.Add("music", "");
             musicbrowser.Navigate("http://www.100fm.co.il/jwplayer/jwplayer.aspx");
             YourMusic.Text = "Or input your favourite song's YouTube URL here!";
         }
@@ -40,19 +48,29 @@ namespace ProjectJ
 
         private void HouseB_Click_1(object sender, RoutedEventArgs e)
         {
-            musicbrowser.Navigate("https://www.internet-radio.com/player/?mount=http://pulseedm.cdnstream1.com:8124/1373_128.m3u&title=PulseEDM%20Dance%20Music%20Radio&website=www.pulseedm.com");
+
+            music.Add("house", "");
+            response = client.UploadValues("http://localhost/", "POST", music);
+            responseString = Encoding.UTF8.GetString(response);
+            musicbrowser.Navigate(responseString);
         }
 
         private void RockB_Click(object sender, RoutedEventArgs e)
         {
-            musicbrowser.Navigate("https://www.internet-radio.com/player/?mount=http://uk5.internet-radio.com:8251/listen.pls&title=Classic%20Rock%20HD%20Plus&website=http://classicrockflorida.com");
+            music.Add("rock", "");
+            response = client.UploadValues("http://localhost/", "POST", music);
+            responseString = Encoding.UTF8.GetString(response);
+            musicbrowser.Navigate(responseString);
 
         }
 
 
         private void HipHopB_Click_1(object sender, RoutedEventArgs e)
         {
-            musicbrowser.Navigate("https://www.internet-radio.com/player/?mount=http://us1.internet-radio.com:8336/listen.pls&title=LadyLinQRadio&website=http://www.internet-radio.com");
+            music.Add("hip", "");
+            response = client.UploadValues("http://localhost/", "POST", music);
+            responseString = Encoding.UTF8.GetString(response);
+            musicbrowser.Navigate(responseString);
 
         }
 
@@ -76,6 +94,7 @@ namespace ProjectJ
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
+            musicbrowser.Navigate("http://www.blank.org");
             this.Close();
         }
     }

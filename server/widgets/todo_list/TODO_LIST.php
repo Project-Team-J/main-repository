@@ -10,14 +10,14 @@ require_once ('C:\projectj\main-repository\server\Database.php');
 class TODO_LIST
 {
     private $conn;
-    private $id;
+    private $user;
     private $data;
-    public function __construct($id)
+    public function __construct($uname)
     {
         $database = new Database();
         $db = $database->dbConnection();
         $this->conn = $db;
-        $this->id = $id;
+        $this->user = &$uname;
     }
     public function getConn(){
         return $this->conn;
@@ -27,10 +27,10 @@ class TODO_LIST
         $stmt = $this->conn->prepare($sql);
         return $stmt;
     }
-    public function getTask($uid)
+    public function getTask()
     {
         try {
-            $stmt=$this->conn->prepare("SELECT * FROM todo_list WHERE user_id='$uid'");
+            $stmt=$this->conn->prepare("SELECT * FROM todo_list WHERE user_name='$this->user'");
             $stmt->execute(array());
             if ($stmt) {
                 $str = "task";
@@ -65,23 +65,23 @@ class TODO_LIST
 
 
     }
-    public function deleteTask($uid)
+    public function deleteTask($uid,$tasks)
     {
-        $sql="DELETE FROM todo_list WHERE user_id=:uid";
+        $sql="DELETE FROM todo_list WHERE user_id='$uid'";
         return $sql;
     }
 
     public function run(){
 
-        $this->getTask(7);
-        if (isset($_POST['add'])) {
-            $task = trim($_POST['task']);
-            $d = trim($_POST['date']);
-            // $d=DateTime::ATOM;
-            $this->addTask($this->id, $task, $d);
+        $this->getTask();
+       //if (isset($_GET['add'])) {
+         //   $task = trim($_POST['task']);
+          //  $d = trim($_POST['date']);
+           // $this->addTask(2, "or" , "23/07/2017" );
+       // }
+       if (isset($_POST['delete'])) {
+          $this->deleteTask(2,trim($_POST['task']));
         }
-        // if (isset($_POST['delete'])) {
-        // }
     }
 }
 

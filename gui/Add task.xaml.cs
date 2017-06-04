@@ -24,24 +24,27 @@ namespace ProjectJ
     /// </summary>
     public partial class Add_task : Window
     {
-        List<Task> list = new List<Task>();
         WebClient client = new WebClient();
-        
-        public Add_task(List<Task> list)
+        List<Task> list = new List<Task>();
+        NameValueCollection todo_list = new NameValueCollection();
+
+
+        public Add_task(List<Task> list, NameValueCollection todo_list)
         {
             InitializeComponent();
-            this.list = list;
+            this.todo_list = todo_list;
+            todo_list.Add("add", "");
+            todo_list.Add("task", task.Text);
+            todo_list.Add("date", dates.ToString());
+
+
         }
 
         public void adding_Click(object sender, RoutedEventArgs e)
         {
-            NameValueCollection todo_list = new NameValueCollection();
-            todo_list.Add("add", "");
-            todo_list.Add("task", task.Text);
-            DateTime d = new DateTime();
-            todo_list.Add("date",d.ToString() );
+
+            list.Add(new Task(task.Text, Convert.ToDateTime(dates.ToString())));
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
-            list.Add(new Task(task.Text,d));
             this.Close();
             
         }

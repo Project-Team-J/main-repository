@@ -19,11 +19,12 @@ class Main
         require_once("App.php");
         $app = new App();
         $login = new USER();
+        global $_SESSION;
         if(isset($_POST['login'])) {
             $uname = strip_tags($_POST['username']);
             $umail = strip_tags($_POST['username']);
             $upass = strip_tags($_POST['password']);
-
+            $_SESSION["uname"]=$uname;
             if ($login->doLogin($uname, $umail, $upass)) {
                 echo "login successfully!";
             }
@@ -81,14 +82,25 @@ class Main
             $we->run();
         }
         if (isset($_POST['todo_list'])) {
-           $tl = new TODO_LIST($login->getId());
-           // $tl = new TODO_LIST(2);
+
+           $tl = new TODO_LIST($_SESSION["uname"]);
+          // $tl = new TODO_LIST(2);
            //echo $login->getId();
+          // $tl->run();
+           //$tl= new TODO_LIST($login->getTODOid());
            $tl->run();
+
+
         }
         if (isset($_GET['td'])){
-            $tl = new TODO_LIST(7);
+            echo $login->getId();
+            $tl = new TODO_LIST("or");
             $tl->run();
+        }
+        if (isset($_POST['music']))
+        {
+            $m=new MUSIC();
+            $m->run();
         }
     }
 }

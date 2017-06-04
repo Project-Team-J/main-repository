@@ -6,10 +6,11 @@ require_once('widgets/translation/TRANSLATION.php');
 require_once('widgets/exchange/EXCHANGE.php');
 require_once('widgets/weather/WEATHER.php');
 require_once('widgets/todo_list/TODO_LIST.php');
+require_once('widgets/music/MUSIC.php');
 class USER
 {
     private $conn;
-    private $id;
+    var $id;
     public function __construct()
     {
         $database = new Database();
@@ -65,7 +66,7 @@ class USER
                 if(password_verify($upass, $userRow['user_pass']))
                 {
                     $_SESSION['user_session'] = $userRow['user_id'];
-                    $this->id = $userRow['user_id'];
+                    $this->id = $_SESSION['user_session'];
                     return true;
                 }
                 else
@@ -101,7 +102,10 @@ class USER
     }
     public function getId()
     {
-        return $this->id;
+
+            return $this->id;
+
     }
+
 }
 ?>

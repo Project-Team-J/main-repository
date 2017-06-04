@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" Text="your todo list is:" VerticalAlignment="Top" Width="126"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,22,0,0" TextWrapping="Wrap" Text="ToDo List" VerticalAlignment="Top" Height="42" Width="145" FontSize="30" FontWeight="Bold"/>
-        <ListView x:Name="list_task" HorizontalAlignment="Left" Height="140" Margin="59,121,0,0" VerticalAlignment="Top" Width="282" Grid.ColumnSpan="2">
+        <ListView x:Name="list_task" HorizontalAlignment="Left" Height="121" Margin="86,130,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="TASK" DisplayMemberBinding="{Binding Path=TASK}"/>
@@ -23,7 +23,6 @@
         </ListView>
         <Button x:Name="add" Content="add task" HorizontalAlignment="Left" Margin="171,83,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.594,0.675" Click="add_Click"/>
         <Button x:Name="delete" Content="delete task" HorizontalAlignment="Left" Margin="17.321,83,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.321,0.675" Click="delete_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
-
 
     </Grid>
 </Window>

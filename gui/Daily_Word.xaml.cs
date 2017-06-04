@@ -31,16 +31,16 @@ namespace ProjectJ
             {
                 NameValueCollection dailyWordCol = new NameValueCollection();
                 dailyWordCol.Add("daily_word", "");
-                byte[] response = client.UploadValues("http://localhost/", "POST", dailyWordCol);
+                byte[] response = client.UploadValues("http://localhost/", "POST", dailyWordCol);//-----getting the word and the url of the image------
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
-                this.Label_word.Content = (string)stuff.word;
-                String fullFilePath = @stuff.img;
+                this.Label_word.Content = (string)stuff.word;//---- take the word from the result-----
+                String fullFilePath = @stuff.img;//---- take the image url from the result-----
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);
                 bitmap.EndInit();
-                this.Images.Source = bitmap;
+                this.Images.Source = bitmap;//----print the image-----
             }
         }
         private void button_Click(object sender, RoutedEventArgs e)
