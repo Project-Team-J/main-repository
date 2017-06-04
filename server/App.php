@@ -5,7 +5,7 @@ use GuzzleHttp\Client;
 class App
 {
     public $gClient;
-    static private $_instance = null;
+    private static $_instance = null;
     
     private function __construct(){
         $this->gClient = new Client();
@@ -24,11 +24,11 @@ class App
     }
     
     public static function get_instance() {
-        if(!static::$_instance) {
-            static::$_instance = new App();
+        if(!app::$_instance) {
+            app::$_instance = new App();
         }
         
-        return static::$_instance;
+        return app::$_instance;
     }
     public function getGClient():Client
     {
