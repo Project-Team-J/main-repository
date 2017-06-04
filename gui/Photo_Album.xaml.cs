@@ -48,16 +48,27 @@ namespace ProjectJ
                 {
                     NameValueCollection photo_album = new NameValueCollection();
                     photo_album.Add("pa", "");
+                    if (combo.Text == "")
+                    {
+                        combo.Text = "NoAlbum";
+                    }
                     photo_album.Add("word", combo.Text);
                     byte[] response = client.UploadValues("http://localhost/", "POST", photo_album);
                     String responseString = Encoding.UTF8.GetString(response);
                     stuff = JsonConvert.DeserializeObject(responseString);
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    string tmp = stuff["image" + index.ToString()];
-                    bitmap.UriSource = new Uri(tmp, UriKind.Absolute);
-                    bitmap.EndInit();
-                    this.pic.Source = bitmap;
+                    if (stuff.result == "Error")
+                    {
+                        Label_message.Content = "Please choose \n your album \n first!";
+                    }
+                    else
+                    {
+                        BitmapImage bitmap = new BitmapImage();
+                        bitmap.BeginInit();
+                        string tmp = stuff["image" + index.ToString()];
+                        bitmap.UriSource = new Uri(tmp, UriKind.Absolute);
+                        bitmap.EndInit();
+                        this.pic.Source = bitmap;
+                    }
                 }
             }
         }

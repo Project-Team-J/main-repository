@@ -20,11 +20,21 @@ class EXCHANGE
     {
         $this->app = App::get_instance();
         $this->amount = $amount;
+
+
         $this->from = $from;
         $this->to = $to;
-        if($this->to==$this->from)
+        if($to=='empty')
         {
-            $this->data = json_encode(array('result' => (string)$amount));
+            $this->data=json_encode(array('result' => (string)$amount));
+        }
+        else if($from=='empty')
+        {
+            $this->data=json_encode(array('result' => "please enter correct parameters"));
+        }
+        else if($this->to==$this->from)
+        {
+            $this->data = json_encode(array('result' => $amount));
         }
         else
         {

@@ -14,11 +14,19 @@ class PHOTO_ALBUM
     
     function __construct($word){
         $this->app = App::get_instance();
-        $this->app->setg_Client('https://api.gettyimages.com');
-        $response =  $this->app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
-        $array = $response->getBody()->getContents();
-        $json = json_decode($array, true);
-        $this->data = json_encode($this->normalize($json));
+        
+        if($word == "NoAlbum")
+        {
+            $this->data=json_encode(array('result' => "Error"));
+        }
+        else
+        {
+            $this->app->setg_Client('https://api.gettyimages.com');
+            $response =  $this->app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
+            $array = $response->getBody()->getContents();
+            $json = json_decode($array, true);
+            $this->data = json_encode($this->normalize($json));
+        }
     }
 
     function normalize($json)
