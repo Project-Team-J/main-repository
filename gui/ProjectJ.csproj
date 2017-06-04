@@ -74,6 +74,9 @@
     <Compile Include="MusicP.xaml.cs">
       <DependentUpon>MusicP.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Photo_Album.xaml.cs">
+      <DependentUpon>Photo_Album.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Todo list.xaml.cs">
       <DependentUpon>Todo list.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
     <Page Include="MusicP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Photo_Album.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Register.xaml">
       <Generator>MSBuild:Compile</Generator>

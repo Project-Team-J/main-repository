@@ -7,6 +7,7 @@ require_once('widgets/exchange/EXCHANGE.php');
 require_once('widgets/weather/WEATHER.php');
 require_once('widgets/todo_list/TODO_LIST.php');
 require_once('widgets/music/MUSIC.php');
+require_once('widgets/photo_album/PHOTO_ALBUM.php');
 class USER
 {
     private $conn;

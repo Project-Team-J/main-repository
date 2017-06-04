@@ -13,7 +13,7 @@ class App
 
     function setg_Client($uri)
     {
-        $this->gClient = new Client(['base_uri' => $uri,'timeout'  => 2.0,]);
+        $this->gClient = new Client(['base_uri' => $uri,'timeout'  => 10.0,]);
     }
 
     function getJsonData($URI)
@@ -29,5 +29,9 @@ class App
         }
         
         return static::$_instance;
+    }
+    public function getGClient():Client
+    {
+        return $this->gClient;
     }
 }

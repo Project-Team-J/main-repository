@@ -15,6 +15,7 @@
         <Button Content="Weather" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="319,270,0,0" Height="62" Click="Button_Click_3" FontSize="16"/>
         <Button Content="To Do List" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="97,268,0,0" Height="62" Click="Button_Click_4" FontSize="16"/>
         <Button Content="MusicP" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="561,270,0,0" Height="62" Click="Button_Click_5" FontSize="16"/>
+        <Button Content="picture album" HorizontalAlignment="Left" Margin="750,152,0,0" VerticalAlignment="Top" Width="109" Height="60" Click="Button_Click_6"/>
 
     </Grid>
 </Window>

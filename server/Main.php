@@ -102,6 +102,11 @@ class Main
             $m=new MUSIC();
             $m->run();
         }
+        if (isset($_POST['pa']))
+        {
+            $p=new PHOTO_ALBUM($_POST['word']);
+            $p->run();
+        }
     }
 }
 ?>

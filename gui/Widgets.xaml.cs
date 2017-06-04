@@ -68,5 +68,11 @@ namespace ProjectJ
             MusicP mp = new MusicP();
             mp.Show();
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            Photo_Album pa = new Photo_Album();
+            pa.Show();
+        }
     }
 }
