@@ -10,11 +10,12 @@ require_once './App.php';
 class PHOTO_ALBUM
 {
     private $data;
-
+    private $app;
+    
     function __construct($word){
         $this->app = App::get_instance();
-        $app->setg_Client('https://api.gettyimages.com');
-        $response = $app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
+        $this->app->setg_Client('https://api.gettyimages.com');
+        $response =  $this->app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
         $array = $response->getBody()->getContents();
         $json = json_decode($array, true);
         $this->data = json_encode($this->normalize($json));
