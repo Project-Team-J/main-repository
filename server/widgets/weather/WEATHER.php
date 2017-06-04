@@ -13,7 +13,7 @@ class WEATHER
 
     function __construct()
     {
-        $this->app = new App();
+        $this->app = get_instance();
         $this->app->setg_Client('http://api.wunderground.com/api/c72ab3004b49b23f/');
         $this->data = $this->app->getJsonData('forecast/geolookup/conditions/q/autoip.json');
         $this->data = json_decode($this->data,true);

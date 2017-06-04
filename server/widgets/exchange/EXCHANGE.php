@@ -18,7 +18,7 @@ class EXCHANGE
 
     function __construct($from, $to, $amount)
     {
-        $this->app = new App();
+        $this->app = get_instance();
         $this->amount = $amount;
         $this->from = $from;
         $this->to = $to;

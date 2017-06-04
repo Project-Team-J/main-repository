@@ -16,8 +16,6 @@ class Main
     {
         session_start();
         require_once("User.php");
-        require_once("App.php");
-        $app = new App();
         $login = new USER();
         global $_SESSION;
         if(isset($_POST['login'])) {

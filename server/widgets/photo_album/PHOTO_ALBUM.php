@@ -11,7 +11,7 @@ class PHOTO_ALBUM
     private $data;
 
     function __construct($word){
-        $app = new App();
+        $app = get_instance();
         $app->setg_Client('https://api.gettyimages.com');
         $response = $app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
         $array = $response->getBody()->getContents();
