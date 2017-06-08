@@ -6,6 +6,7 @@
  * Date: 07/05/2017
  * Time: 16:02
  */
+
 require_once ('C:\projectj\main-repository\server\Database.php');
 class TODO_LIST
 {
@@ -56,7 +57,9 @@ class TODO_LIST
     }
     public function addTask($uid,$tasks,$dates)
     {
-        $stmt = $this->conn->prepare("INSERT INTO todo_list(user_id,task,task_date) VALUES(:uid, :tasks, :dates)");
+        $tasks = trim($_POST['task']);
+        $dates = trim($_POST['date']);
+        $stmt = $this->conn->prepare("INSERT INTO todo_list(user_id,task,task_date) VALUES(2, :tasks, :dates)");
         $stmt->bindparam(":uid", $uid);
         $stmt->bindparam(":tasks", $tasks);
         $stmt->bindparam(":dates", $dates);

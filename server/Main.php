@@ -9,6 +9,7 @@
 class Main
 {
     var $msg = "";
+    private $app;
     function __construct(){
     }
 
@@ -65,7 +66,7 @@ class Main
                 echo "register failed!";
             }
         }
-        if(isset($_POST['daily_word'])) {
+       if(isset($_POST['daily_word'])) {
             $dw = new DAILYWORD();
             $dw->run();
         }
@@ -83,11 +84,7 @@ class Main
         }
         if (isset($_POST['todo_list'])) {
 
-           $tl = new TODO_LIST($_SESSION["uname"]);
-          // $tl = new TODO_LIST(2);
-           //echo $login->getId();
-          // $tl->run();
-           //$tl= new TODO_LIST($login->getTODOid());
+           $tl = new TODO_LIST("or3");
            $tl->run();
 
 
@@ -102,11 +99,11 @@ class Main
             $m=new MUSIC();
             $m->run();
         }
-        if (isset($_POST['pa']))
-        {
-            $p=new PHOTO_ALBUM($_POST['word']);
+        if (isset($_POST['pa'])) {
+            $p = new PHOTO_ALBUM($_POST['word']);
             $p->run();
         }
+
     }
 }
 ?>

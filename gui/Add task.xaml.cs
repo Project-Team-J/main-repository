@@ -34,8 +34,7 @@ namespace ProjectJ
             InitializeComponent();
             this.todo_list = todo_list;
             todo_list.Add("add", "");
-            todo_list.Add("task", task.Text);
-            todo_list.Add("date", dates.ToString());
+  
 
 
         }
@@ -43,7 +42,8 @@ namespace ProjectJ
         public void adding_Click(object sender, RoutedEventArgs e)
         {
 
-            list.Add(new Task(task.Text, Convert.ToDateTime(dates.ToString())));
+            todo_list.Add("task", task.Text);
+            todo_list.Add("date", dates.ToString());
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
             this.Close();
             
