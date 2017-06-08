@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ae681f-b42d-47b4-86c0-f012a7a1ce63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Add task.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Add task.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Todo list.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Todo list.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Widgets.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Widgets.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Exchange.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Exchange.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Photo_Album.xaml" afterPath="$PROJECT_DIR$/../gui/Photo_Album.xaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Photo_Album.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Photo_Album.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Album/style.css" afterPath="$PROJECT_DIR$/Album/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App.php" afterPath="$PROJECT_DIR$/App.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.php" afterPath="$PROJECT_DIR$/Main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User.php" afterPath="$PROJECT_DIR$/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/exchange/EXCHANGE.php" afterPath="$PROJECT_DIR$/widgets/exchange/EXCHANGE.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php" afterPath="$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php" afterPath="$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/translation/TRANSLATION.php" afterPath="$PROJECT_DIR$/widgets/translation/TRANSLATION.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/weather/WEATHER.php" afterPath="$PROJECT_DIR$/widgets/weather/WEATHER.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,10 +42,10 @@
       <file leaf-file-name="Main.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2150">
-              <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+            <state relative-caret-position="2125">
+              <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
               <folding>
-                <marker date="1496903790959" expanded="true" signature="1508:1590" ph="SELECT user_... users" />
+                <marker date="1496903969536" expanded="true" signature="1483:1565" ph="SELECT user_... users" />
               </folding>
             </state>
           </provider>
@@ -472,12 +476,12 @@
       <workItem from="1495965645166" duration="11639000" />
       <workItem from="1496580291496" duration="2127000" />
       <workItem from="1496583347883" duration="16269000" />
-      <workItem from="1496901335086" duration="2398000" />
+      <workItem from="1496901335086" duration="2540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144915000" />
+    <option name="totallyTimeSpent" value="145057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1934" height="1030" extended-state="1" />
@@ -708,14 +712,14 @@
         <state relative-caret-position="602">
           <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
           <folding>
-            <element signature="e#7#87#0#PHP" expanded="true" />
-            <marker date="1496901984653" expanded="true" signature="685:725" ph="SELECT * FRO... todo_list" />
-            <marker date="1496901984653" expanded="true" signature="685:726" ph="SELECT * FRO... todo_list" />
-            <marker date="1496901984653" expanded="true" signature="685:727" ph="SELECT * FRO... todo_list" />
-            <marker date="1496901984653" expanded="true" signature="685:738" ph="SELECT * FRO... todo_list" />
-            <marker date="1496901984653" expanded="true" signature="685:740" ph="SELECT * FRO... todo_list" />
-            <marker date="1496901984653" expanded="true" signature="1604:1675" ph="INSERT INTO todo_list... " />
-            <marker date="1496901984653" expanded="true" signature="1927:1969" ph="DELETE FROM " />
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <marker date="1496903969536" expanded="true" signature="823:863" ph="SELECT * FRO... todo_list" />
+            <marker date="1496903969536" expanded="true" signature="823:864" ph="SELECT * FRO... todo_list" />
+            <marker date="1496903969536" expanded="true" signature="823:865" ph="SELECT * FRO... todo_list" />
+            <marker date="1496903969536" expanded="true" signature="823:876" ph="SELECT * FRO... todo_list" />
+            <marker date="1496903969536" expanded="true" signature="823:878" ph="SELECT * FRO... todo_list" />
+            <marker date="1496903969536" expanded="true" signature="1742:1813" ph="INSERT INTO todo_list... " />
+            <marker date="1496903969536" expanded="true" signature="2065:2107" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -768,10 +772,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        <state relative-caret-position="2125">
+          <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding>
-            <marker date="1496903790959" expanded="true" signature="1508:1590" ph="SELECT user_... users" />
+            <marker date="1496903969536" expanded="true" signature="1483:1565" ph="SELECT user_... users" />
           </folding>
         </state>
       </provider>

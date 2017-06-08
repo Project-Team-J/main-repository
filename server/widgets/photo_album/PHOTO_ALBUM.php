@@ -6,17 +6,27 @@
  * Date: 25/05/2017
  * Time: 18:37
  */
+require_once './App.php';
 class PHOTO_ALBUM
 {
     private $data;
-
+    private $app;
+    
     function __construct($word){
-        $app = new App();
-        $app->setg_Client('https://api.gettyimages.com');
-        $response = $app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
-        $array = $response->getBody()->getContents();
-        $json = json_decode($array, true);
-        $this->data = json_encode($this->normalize($json));
+        $this->app = App::get_instance();
+        
+        if($word == "NoAlbum")
+        {
+            $this->data=json_encode(array('result' => "Error"));
+        }
+        else
+        {
+            $this->app->setg_Client('https://api.gettyimages.com');
+            $response =  $this->app->getGClient()->get('/v3/search/images?phrase='.$word.'', ['headers' => ['Api-Key' => 'j6g7eefn4av9p8yertf72g2e']]);
+            $array = $response->getBody()->getContents();
+            $json = json_decode($array, true);
+            $this->data = json_encode($this->normalize($json));
+        }
     }
 
     function normalize($json)

@@ -34,22 +34,33 @@ namespace ProjectJ
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-           
-            
-                string getcombo1 = (comboBox1.SelectedItem as ComboBoxItem).Content.ToString();
-                string getcombo2 = (comboBox2.SelectedItem as ComboBoxItem).Content.ToString();
+            string getcombo1;
+            string getcombo2;
 
-                WebClient client = new WebClient();
-                NameValueCollection exchangeInfo = new NameValueCollection();
-                Boolean flag=true;
-                foreach (char c in Amount.Text)
-                {
-                    if ((c < '0' || c > '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f') || c == ' ')
-                     {
-                        result.Text = "Please enter an appropriat number --->";
-                        flag = false;
-                     }
-                 }
+            if ((comboBox1.SelectedItem == null))
+            {
+                getcombo1 = "empty";
+            }
+            else
+            {
+                getcombo1 = (comboBox1.SelectedItem as ComboBoxItem).Content.ToString();
+            }
+            if ((comboBox2.SelectedItem == null))
+            {
+                getcombo2 = "empty";
+            }
+            else
+            {
+                getcombo2 = (comboBox2.SelectedItem as ComboBoxItem).Content.ToString();
+            }
+
+
+
+
+            WebClient client = new WebClient();
+            NameValueCollection exchangeInfo = new NameValueCollection();
+            Boolean flag = true;
+
 
 
             if (flag != false)
@@ -63,14 +74,14 @@ namespace ProjectJ
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 result.Text = stuff.result;//----- print the result we got-------
             }
-                
 
 
 
 
 
 
-           
+
+
 
         }
     }

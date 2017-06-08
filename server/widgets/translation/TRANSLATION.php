@@ -17,7 +17,7 @@ class TRANSLATION
 
     function __construct($text, $lang)
     {
-        $this->app = new App();
+        $this->app = App::get_instance();
         $this->text = $text;
         $this->lang = $lang;
 //        $guzzleClient = new \GuzzleHttp\Client(array( 'curl' => array( CURLOPT_SSL_VERIFYPEER => false, ), ));

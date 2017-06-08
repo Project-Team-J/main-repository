@@ -6,8 +6,12 @@
  * Date: 07/05/2017
  * Time: 16:02
  */
+<<<<<<< HEAD
 
 require_once ('C:\projectj\main-repository\server\Database.php');
+=======
+//require_once ('C:\projectj\main-repository\server\Database.php');
+>>>>>>> 91b198fe76152bdd501ae85be84575f4a1a525e6
 class TODO_LIST
 {
     private $conn;
