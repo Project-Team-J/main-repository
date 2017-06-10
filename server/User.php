@@ -12,7 +12,6 @@ require_once('widgets/photo_album/PHOTO_ALBUM.php');
 class USER
 {
     private $conn;
-    var $id;
     public function __construct()
     {
         $database = new Database();
@@ -91,22 +90,11 @@ class USER
         }
     }
 
-    public function redirect($url)
-    {
-        header("Location: $url");
-    }
-
     public function doLogout()
     {
         session_destroy();
         unset($_SESSION['user_session']);
         return true;
-    }
-    public function getId()
-    {
-
-            return $this->id;
-
     }
 
 }

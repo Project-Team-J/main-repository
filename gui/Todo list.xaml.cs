@@ -35,7 +35,7 @@ namespace ProjectJ
                 todo_list.Add("todo_list", "");
                 todo_list.Add("uname", Widgets.getUname());
                 todo_list.Add("upass", Widgets.getUpass());
-                byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
+                byte[] response = client.UploadValues(Login.server, "POST", todo_list);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 int i = 1;
@@ -68,12 +68,11 @@ namespace ProjectJ
         {
 
             todo_list.Add("delete", "");
-
             todo_list.Add("todo_list_delete", "");
             todo_list.Add("task", "hello world");
             todo_list.Add("uname", Widgets.getUname());
             todo_list.Add("upass", Widgets.getUpass());
-            byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
+            byte[] response = client.UploadValues(Login.server, "POST", todo_list);
             this.Close();
             Todo_list td = new Todo_list();
             td.Show();

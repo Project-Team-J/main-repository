@@ -31,7 +31,7 @@ namespace ProjectJ
             {
                 NameValueCollection dailyWordCol = new NameValueCollection();
                 dailyWordCol.Add("daily_word", "");
-                byte[] response = client.UploadValues("http://localhost/", "POST", dailyWordCol);//-----getting the word and the url of the image------
+                byte[] response = client.UploadValues(Login.server, "POST", dailyWordCol);//-----getting the word and the url of the image------
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 this.Label_word.Content = (string)stuff.word;//---- take the word from the result-----

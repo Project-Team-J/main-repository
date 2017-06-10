@@ -69,7 +69,7 @@ namespace ProjectJ
                 exchangeInfo.Add("from", getcombo1);//------saving the "from" rate.-------
                 exchangeInfo.Add("to", getcombo2);// ------saving the "to" rate.--------
                 exchangeInfo.Add("amount", Amount.Text);//----- saving the amount the user want to exchange-------
-                byte[] response = client.UploadValues("http://localhost/", "POST", exchangeInfo);//--------sending the details to the php code ang getting the result---------
+                byte[] response = client.UploadValues(Login.server, "POST", exchangeInfo);//--------sending the details to the php code ang getting the result---------
                 var responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 result.Text = stuff.result;//----- print the result we got-------

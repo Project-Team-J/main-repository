@@ -50,7 +50,7 @@ namespace ProjectJ
         {
 
             music.Add("house", "");
-            response = client.UploadValues("http://localhost/", "POST", music);
+            response = client.UploadValues(Login.server, "POST", music);
             responseString = Encoding.UTF8.GetString(response);
             musicbrowser.Navigate(responseString);
         }
@@ -58,7 +58,7 @@ namespace ProjectJ
         private void RockB_Click(object sender, RoutedEventArgs e)
         {
             music.Add("rock", "");
-            response = client.UploadValues("http://localhost/", "POST", music);
+            response = client.UploadValues(Login.server, "POST", music);
             responseString = Encoding.UTF8.GetString(response);
             musicbrowser.Navigate(responseString);
 
@@ -68,7 +68,7 @@ namespace ProjectJ
         private void HipHopB_Click_1(object sender, RoutedEventArgs e)
         {
             music.Add("hip", "");
-            response = client.UploadValues("http://localhost/", "POST", music);
+            response = client.UploadValues(Login.server, "POST", music);
             responseString = Encoding.UTF8.GetString(response);
             musicbrowser.Navigate(responseString);
 

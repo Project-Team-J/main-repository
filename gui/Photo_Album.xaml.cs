@@ -53,7 +53,7 @@ namespace ProjectJ
                         combo.Text = "NoAlbum";
                     }
                     photo_album.Add("word", combo.Text);
-                    byte[] response = client.UploadValues("http://localhost/", "POST", photo_album);
+                    byte[] response = client.UploadValues(Login.server, "POST", photo_album);
                     String responseString = Encoding.UTF8.GetString(response);
                     stuff = JsonConvert.DeserializeObject(responseString);
                     if (stuff.result == "Error")

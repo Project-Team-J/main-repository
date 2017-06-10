@@ -34,7 +34,7 @@ namespace ProjectJ
                 NameValueCollection weatherCol = new NameValueCollection();
                 weatherCol.Add("weather", "");
                 weatherCol.Add("city", "ashkelon");
-                byte[] response = client.UploadValues("http://localhost/", "POST", weatherCol);
+                byte[] response = client.UploadValues(Login.server, "POST", weatherCol);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
                 date1.Text = stuff.date[0];

@@ -24,6 +24,7 @@ namespace ProjectJ
     /// </summary>
     public partial class Login : Window
     {
+        public static String server = "https://projectj.000webhostapp.com/";
         WebClient client = new WebClient();
         WebException x;
         public Login()
@@ -47,7 +48,7 @@ namespace ProjectJ
             UserInfo.Add("login", "");
             UserInfo.Add("username", UserMail.Text);
             UserInfo.Add("password", UserPassword.Password);
-            byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+            byte[] response = client.UploadValues(Login.server, "POST", UserInfo);
             String responseString = Encoding.UTF8.GetString(response);
             dynamic stuff = JsonConvert.DeserializeObject(responseString);
             String cases = stuff.msg;

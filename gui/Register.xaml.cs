@@ -41,7 +41,7 @@ namespace ProjectJ
             UserInfo.Add("user_name", user_name.Text);
             UserInfo.Add("user_mail", user_mail.Text);
             UserInfo.Add("user_pass", user_pass.Password);
-            var InsertUser = client.UploadValues("http://localhost/", "POST", UserInfo);
+            var InsertUser = client.UploadValues(Login.server, "POST", UserInfo);
             var responseString = Encoding.UTF8.GetString(InsertUser);
             dynamic stuff = JsonConvert.DeserializeObject(responseString);
             String cases = stuff.msg;

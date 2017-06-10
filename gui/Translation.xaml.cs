@@ -42,7 +42,7 @@ namespace ProjectJ
                 else
                 {
                     translationCol.Add("text", trans2.Text);
-                    byte[] response = client.UploadValues("http://localhost/", "POST", translationCol);
+                    byte[] response = client.UploadValues(Login.server, "POST", translationCol);
                     String responseString = Encoding.UTF8.GetString(response);
                     responseString = responseString.Replace("[", "").Replace("]", "");
                     dynamic stuff = JsonConvert.DeserializeObject(responseString);

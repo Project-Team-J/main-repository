@@ -43,7 +43,7 @@ namespace ProjectJ
             todo_list.Add("task", task.Text);
             String d = "" + dates.SelectedDate.Value.Year + "-" + dates.SelectedDate.Value.Month + "-" + dates.SelectedDate.Value.Day;
             todo_list.Add("date", d);
-            byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
+            byte[] response = client.UploadValues(Login.server, "POST", todo_list);
             this.Close();
             Todo_list td = new Todo_list();
             td.Show();
