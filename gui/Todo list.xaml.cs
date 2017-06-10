@@ -66,12 +66,11 @@ namespace ProjectJ
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
+
             todo_list.Add("delete", "");
-=======
+
             todo_list.Add("todo_list_delete", "");
             todo_list.Add("task", "hello world");
->>>>>>> 3fe3341527d33a0f03e44104ee5a279b319009f1
             todo_list.Add("uname", Widgets.getUname());
             todo_list.Add("upass", Widgets.getUpass());
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
