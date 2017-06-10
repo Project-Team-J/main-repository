@@ -42,7 +42,11 @@ namespace ProjectJ
 
         public static void setUpass(String p)
         {
+<<<<<<< HEAD
             upass = p;
+=======
+            upass =  p;
+>>>>>>> 3fe3341527d33a0f03e44104ee5a279b319009f1
         }
 
 

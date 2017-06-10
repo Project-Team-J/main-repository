@@ -42,6 +42,7 @@ namespace ProjectJ
 
         private void Log_in_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             NameValueCollection UserInfo = new NameValueCollection();
             UserInfo.Add("login", "");
             UserInfo.Add("username", UserMail.Text);
@@ -72,6 +73,40 @@ namespace ProjectJ
                         break;
                     }
             }
+=======
+                NameValueCollection UserInfo = new NameValueCollection();
+                UserInfo.Add("login", "");
+                UserInfo.Add("username", UserMail.Text);
+                UserInfo.Add("password", UserPassword.Password);
+                byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                String responseString = Encoding.UTF8.GetString(response);
+                dynamic stuff = JsonConvert.DeserializeObject(responseString);
+                String cases = stuff.msg;
+                switch (cases)
+                {
+                    case "login successfully!":
+                        {
+                            Widgets wid = new Widgets();
+                            Close();
+                            String tmp = stuff.uname;
+                            Widgets.setUname(tmp);
+                            tmp = stuff.upass;
+                            Widgets.setUpass(tmp);
+                            wid.Show();
+                            break;
+                        }
+                    case "Wrong Details!":
+                        {
+                            Label_message.Content = "Wrong Details!";
+                            break;
+                        }
+                    default:
+                        {
+                            Label_message.Content = "Server error!";
+                            break;
+                        }
+                }
+>>>>>>> 3fe3341527d33a0f03e44104ee5a279b319009f1
         }
     }
 
