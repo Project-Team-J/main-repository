@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ae681f-b42d-47b4-86c0-f012a7a1ce63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Exchange.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Exchange.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Photo_Album.xaml" afterPath="$PROJECT_DIR$/../gui/Photo_Album.xaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Photo_Album.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Photo_Album.xaml.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Album/style.css" afterPath="$PROJECT_DIR$/Album/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App.php" afterPath="$PROJECT_DIR$/App.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Add task.xaml" afterPath="$PROJECT_DIR$/../gui/Add task.xaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Add task.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Add task.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Login.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Login.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gui/Todo list.xaml.cs" afterPath="$PROJECT_DIR$/../gui/Todo list.xaml.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.php" afterPath="$PROJECT_DIR$/Main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/exchange/EXCHANGE.php" afterPath="$PROJECT_DIR$/widgets/exchange/EXCHANGE.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php" afterPath="$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User.php" afterPath="$PROJECT_DIR$/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php" afterPath="$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/translation/TRANSLATION.php" afterPath="$PROJECT_DIR$/widgets/translation/TRANSLATION.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/weather/WEATHER.php" afterPath="$PROJECT_DIR$/widgets/weather/WEATHER.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,14 +35,40 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="Main.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            <state relative-caret-position="652">
+              <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
               <folding>
-                <marker date="1496903969536" expanded="true" signature="1483:1565" ph="SELECT user_... users" />
+                <marker date="1497130070326" expanded="true" signature="1380:1462" ph="SELECT user_... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TODO_LIST.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
+              <folding>
+                <element signature="e#7#87#0#PHP" expanded="false" />
+                <marker date="1497130062221" expanded="true" signature="665:718" ph="SELECT * FRO... todo_list" />
+                <marker date="1497130062221" expanded="true" signature="1501:1571" ph="INSERT INTO todo_list... " />
+                <marker date="1497130062221" expanded="true" signature="1501:1585" ph="INSERT INTO todo_list... " />
+                <marker date="1497130062221" expanded="true" signature="1816:1856" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1816:1862" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1816:1864" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1865:1867" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1882:1918" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1882:1919" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1882:2091" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1938:1976" ph="DELETE from " />
+                <marker date="1497130062221" expanded="true" signature="1999:2037" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="1999:2043" ph="DELETE FROM " />
+                <marker date="1497130062221" expanded="true" signature="2090:2091" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -108,7 +131,6 @@
         <option value="$PROJECT_DIR$/widgets/todo_list/TODO_LIST1.php" />
         <option value="$PROJECT_DIR$/dblogin.sql" />
         <option value="$PROJECT_DIR$/App.php" />
-        <option value="$PROJECT_DIR$/User.php" />
         <option value="$PROJECT_DIR$/widgets.php" />
         <option value="$PROJECT_DIR$/widgets/daily_word/DAILYWORD.php" />
         <option value="$PROJECT_DIR$/widgets/exchange/EXCHANGE.php" />
@@ -118,6 +140,8 @@
         <option value="$PROJECT_DIR$/widgets/weather/WEATHER.php" />
         <option value="$PROJECT_DIR$/FrontController.php" />
         <option value="$PROJECT_DIR$/Dispatcher.php" />
+        <option value="$PROJECT_DIR$/User.php" />
+        <option value="$USER_HOME$/Desktop/server/Main.php" />
         <option value="$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php" />
         <option value="$PROJECT_DIR$/Main.php" />
       </list>
@@ -142,9 +166,32 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="width" value="1934" />
-    <option name="height" value="1030" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpDeprecationInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -164,6 +211,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,24 +363,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/projectj1" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Reouven Bentolila/Desktop/Project/main-repository/server/Main.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projectj\main-repository\server\widgets\todo_list" />
-      <recent name="C:\projectj\main-repository\server\oop" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projectj\main-repository\server\widgets\todo_list" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projectj1" />
+      <recent name="C:\" />
+      <recent name="C:\projectj\main-repository\server\widgets\todo_list" />
+      <recent name="C:\projectj\main-repository\server\oop" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -476,18 +525,23 @@
       <workItem from="1495965645166" duration="11639000" />
       <workItem from="1496580291496" duration="2127000" />
       <workItem from="1496583347883" duration="16269000" />
-      <workItem from="1496901335086" duration="2540000" />
+      <workItem from="1496901335086" duration="2707000" />
+      <workItem from="1496904453015" duration="1218000" />
+      <workItem from="1496950670354" duration="6000" />
+      <workItem from="1497012160346" duration="491000" />
+      <workItem from="1497012669385" duration="7421000" />
+      <workItem from="1497123610669" duration="6003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145057000" />
+    <option name="totallyTimeSpent" value="160363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="1934" height="1030" extended-state="1" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15219665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34703195" sideWeight="0.50625" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -540,9 +594,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oop/home.php" />
-    <entry file="file://$PROJECT_DIR$/loginoop/home.php" />
-    <entry file="file://$PROJECT_DIR$/loginoop/config.php" />
     <entry file="file://$PROJECT_DIR$/loginoop/index.php" />
     <entry file="file://$PROJECT_DIR$/oop/dbconfig.php" />
     <entry file="file://$PROJECT_DIR$/loginoop/dbConnect.php" />
@@ -595,30 +646,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets.php" />
-    <entry file="file://$PROJECT_DIR$/widgets/translation/TRANSLATION.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontController.php" />
+    <entry file="file://$PROJECT_DIR$/Dispatcher.php" />
     <entry file="file://$PROJECT_DIR$/App.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -631,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-825">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,52 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/exchange/EXCHANGE.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-948">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/music/MUSIC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-          <folding>
-            <element signature="e#7#87#0#PHP" expanded="false" />
-            <marker date="1496903969536" expanded="true" signature="823:863" ph="SELECT * FRO... todo_list" />
-            <marker date="1496903969536" expanded="true" signature="823:864" ph="SELECT * FRO... todo_list" />
-            <marker date="1496903969536" expanded="true" signature="823:865" ph="SELECT * FRO... todo_list" />
-            <marker date="1496903969536" expanded="true" signature="823:876" ph="SELECT * FRO... todo_list" />
-            <marker date="1496903969536" expanded="true" signature="823:878" ph="SELECT * FRO... todo_list" />
-            <marker date="1496903969536" expanded="true" signature="1742:1813" ph="INSERT INTO todo_list... " />
-            <marker date="1496903969536" expanded="true" signature="2065:2107" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nbproject/project.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,29 +734,111 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/exchange/EXCHANGE.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/translation/TRANSLATION.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/photo_album/PHOTO_ALBUM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1023">
-          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1496594315594" expanded="true" signature="977:1057" ph="INSERT INTO users... " />
-            <marker date="1496594315594" expanded="true" signature="1594:1697" ph="SELECT user_... users" />
+            <marker date="1497012176390" expanded="true" signature="941:1021" ph="INSERT INTO users... " />
+            <marker date="1497012176390" expanded="true" signature="1558:1661" ph="SELECT user_... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/server/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/server/widgets/todo_list/TODO_LIST.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/projectj1/TODO_LIST.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497018696038" expanded="true" signature="665:718" ph="SELECT * FRO... todo_list" />
+            <marker date="1497018696038" expanded="true" signature="1513:1604" ph="INSERT INTO todo_list... " />
+            <marker date="1497018696038" expanded="true" signature="1917:1956" ph="DELETE FROM " />
+            <marker date="1497018696038" expanded="true" signature="1974:2011" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/todo_list/TODO_LIST.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <marker date="1497130062221" expanded="true" signature="665:718" ph="SELECT * FRO... todo_list" />
+            <marker date="1497130062221" expanded="true" signature="1501:1571" ph="INSERT INTO todo_list... " />
+            <marker date="1497130062221" expanded="true" signature="1501:1585" ph="INSERT INTO todo_list... " />
+            <marker date="1497130062221" expanded="true" signature="1816:1856" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1816:1862" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1816:1864" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1865:1867" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1882:1918" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1882:1919" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1882:2091" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1938:1976" ph="DELETE from " />
+            <marker date="1497130062221" expanded="true" signature="1999:2037" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="1999:2043" ph="DELETE FROM " />
+            <marker date="1497130062221" expanded="true" signature="2090:2091" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/music/MUSIC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        <state relative-caret-position="652">
+          <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
           <folding>
-            <marker date="1496903969536" expanded="true" signature="1483:1565" ph="SELECT user_... users" />
+            <marker date="1497130070326" expanded="true" signature="1380:1462" ph="SELECT user_... users" />
           </folding>
         </state>
       </provider>

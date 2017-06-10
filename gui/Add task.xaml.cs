@@ -33,20 +33,22 @@ namespace ProjectJ
         {
             InitializeComponent();
             this.todo_list = todo_list;
-            todo_list.Add("add", "");
+
   
 
 
         }
 
-        public void adding_Click(object sender, RoutedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)
         {
-
+            todo_list.Add("add", "");
             todo_list.Add("task", task.Text);
-            todo_list.Add("date", dates.ToString());
+            String d = "" + dates.SelectedDate.Value.Year + "-" + dates.SelectedDate.Value.Month + "-" + dates.SelectedDate.Value.Day;
+            todo_list.Add("date", d);
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
             this.Close();
-            
+            Todo_list td = new Todo_list();
+            td.Show();
         }
     }
 }

@@ -32,8 +32,9 @@ namespace ProjectJ
             using (client)
             {
 
-
                 todo_list.Add("todo_list", "");
+                todo_list.Add("uname", Widgets.getUname());
+                todo_list.Add("upass", Widgets.getUpass());
                 byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
@@ -45,10 +46,10 @@ namespace ProjectJ
                 {
                     tmp = t + i.ToString();
                     list.Add(new Task((string)stuff[tmp].Task, Convert.ToDateTime((string)stuff[tmp].Date)));
-                    list_task.Items.Add(list[i-1]);
+                    list_task.Items.Add(list[i - 1]);
                     ++i;
                 }
-                
+
 
 
             }
@@ -56,20 +57,24 @@ namespace ProjectJ
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
+
             Add_task t1 = new Add_task(list, todo_list);
+            this.Close();
             t1.Show();
-            list_task.Items.Add(list);
-            
+
         }
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
             todo_list.Add("delete", "");
-            todo_list.Add("task", "t");
+            todo_list.Add("uname", Widgets.getUname());
+            todo_list.Add("upass", Widgets.getUpass());
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
-            String responseString = Encoding.UTF8.GetString(response);
-            dynamic stuff = JsonConvert.DeserializeObject(responseString);
-            list_task.Items.Add(list);
+            this.Close();
+            Todo_list td = new Todo_list();
+            td.Show();
+            
+
         }
     }
     public class Task

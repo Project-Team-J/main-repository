@@ -14,25 +14,41 @@ namespace ProjectJ
     /// </summary>
     public partial class Widgets : Window
     {
+        private static String uname;
+        private static String upass;
 
-        NameValueCollection press = new NameValueCollection();
-
-        WebClient client = new WebClient();
         public Widgets()
         {
             this.Left = 350;
             this.Top = 200;
-            press.Add("true", "");
             InitializeComponent();
-
         }
 
- 
+
+        public static String getUname()
+        {
+            return uname;
+        }
+
+        public static String getUpass()
+        {
+            return upass;
+        }
+
+        public static void setUname(String u)
+        {
+            uname = u;
+        }
+
+        public static void setUpass(String p)
+        {
+            upass = p;
+        }
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            client.UploadValues("http://localhost/", "POST", press);
             Daily_Word dw = new Daily_Word();
             dw.Show();
         }
@@ -48,53 +64,40 @@ namespace ProjectJ
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
-
-            client.UploadValues("http://localhost/", "POST", press);
             Translation ts = new Translation();
             ts.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
-            client.UploadValues("http://localhost/", "POST", press);
             Exchange ex = new Exchange();
             ex.Show();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
-
-            client.UploadValues("http://localhost/", "POST", press);
             Weather we = new Weather();
             we.Show();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-
-
-            client.UploadValues("http://localhost/", "POST", press);
             Todo_list td = new Todo_list();
             td.Show();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-
-            client.UploadValues("http://localhost/", "POST", press);
             MusicP mp = new MusicP();
             mp.Show();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-
-            client.UploadValues("http://localhost/", "POST", press);
             Photo_Album pa = new Photo_Album();
             pa.Show();
         }
+
+
     }
 }

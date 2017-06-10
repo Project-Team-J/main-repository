@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Specialized;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace ProjectJ
 {
@@ -23,7 +24,7 @@ namespace ProjectJ
     /// </summary>
     public partial class Register : Window
     {
-        
+
         WebClient client = new WebClient();
         public Register()
         {
@@ -31,7 +32,7 @@ namespace ProjectJ
             this.Top = 200;
             InitializeComponent();
         }
-        
+
 
         private void SubmitUser_Click(object sender, RoutedEventArgs e)
         {
@@ -42,9 +43,9 @@ namespace ProjectJ
             UserInfo.Add("user_pass", user_pass.Password);
             var InsertUser = client.UploadValues("http://localhost/", "POST", UserInfo);
             var responseString = Encoding.UTF8.GetString(InsertUser);
-            responseString = responseString.Replace("\r", "").Replace("\n", "");
-            Label_message.Content = responseString;
-            switch (responseString)
+            dynamic stuff = JsonConvert.DeserializeObject(responseString);
+            String cases = stuff.msg;
+            switch (cases)
             {
                 case "register successfully!":
                     {
@@ -54,11 +55,6 @@ namespace ProjectJ
                         log.Label_message.Content = "Your account has been created successfully please login!";
                         Close();
                         log.Show();
-                        break;
-                    }
-                case "register failed!":
-                    {
-                        Label_message.Content = "register failed!";
                         break;
                     }
                 case "invalid username!":
@@ -100,7 +96,7 @@ namespace ProjectJ
             Login log = new Login();
             Close();
             log.Show();
-             
+
         }
 
         private void txt_umail_TextChanged(object sender, TextChangedEventArgs e)

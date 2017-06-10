@@ -6,17 +6,11 @@
  * Date: 07/05/2017
  * Time: 16:02
  */
-<<<<<<< HEAD
-
 require_once ('C:\projectj\main-repository\server\Database.php');
-=======
-//require_once ('C:\projectj\main-repository\server\Database.php');
->>>>>>> 91b198fe76152bdd501ae85be84575f4a1a525e6
 class TODO_LIST
 {
     private $conn;
     private $user;
-    private $data;
     public function __construct($uname)
     {
         $database = new Database();
@@ -59,12 +53,9 @@ class TODO_LIST
             echo $e->getMessage();
         }
     }
-    public function addTask($uid,$tasks,$dates)
+    public function addTask($tasks,$dates)
     {
-        $tasks = trim($_POST['task']);
-        $dates = trim($_POST['date']);
-        $stmt = $this->conn->prepare("INSERT INTO todo_list(user_id,task,task_date) VALUES(2, :tasks, :dates)");
-        $stmt->bindparam(":uid", $uid);
+        $stmt = $this->conn->prepare("INSERT INTO todo_list(task,task_date,user_name) VALUES(:tasks, :dates,'$this->user')");
         $stmt->bindparam(":tasks", $tasks);
         $stmt->bindparam(":dates", $dates);
         $stmt->execute();
@@ -72,22 +63,28 @@ class TODO_LIST
 
 
     }
-    public function deleteTask($uid,$tasks)
+    public function deleteTask($uname)
     {
-        $sql="DELETE FROM todo_list WHERE user_id='$uid'";
+        $stmt = $this->conn->prepare("DELETE FROM todo_list WHERE user_name='.$uname.'");
+        $sql="DELETE FROM todo_list WHERE user_id=4";
+        $query="DELETE from todo_list WHERE user_name=$uname";
+        $sql="DELETE FROM todo_list WHERE user_name=:uname";
+        echo "ccwcws";
         return $sql;
+
+
     }
 
     public function run(){
 
         $this->getTask();
-       //if (isset($_GET['add'])) {
-         //   $task = trim($_POST['task']);
-          //  $d = trim($_POST['date']);
-           // $this->addTask(2, "or" , "23/07/2017" );
-       // }
+        if (isset($_POST['add'])) {
+         $task = trim($_POST['task']);
+         $d = trim($_POST['date']);
+         $this->addTask($task,$d);
+        }
        if (isset($_POST['delete'])) {
-          $this->deleteTask(2,trim($_POST['task']));
+          $this->deleteTask(2);
         }
     }
 }
