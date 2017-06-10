@@ -33,6 +33,8 @@ namespace ProjectJ
             {
 
                 todo_list.Add("todo_list", "");
+                todo_list.Add("uname", Widgets.getUname());
+                todo_list.Add("upass", Widgets.getUpass());
                 byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
                 String responseString = Encoding.UTF8.GetString(response);
                 dynamic stuff = JsonConvert.DeserializeObject(responseString);
@@ -63,8 +65,10 @@ namespace ProjectJ
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-            todo_list.Add("delete", "");
-            todo_list.Add("task", "t");
+            todo_list.Add("todo_list_delete", "");
+            todo_list.Add("task", "hello world");
+            todo_list.Add("uname", Widgets.getUname());
+            todo_list.Add("upass", Widgets.getUpass());
             byte[] response = client.UploadValues("http://localhost/", "POST", todo_list);
             String responseString = Encoding.UTF8.GetString(response);
             dynamic stuff = JsonConvert.DeserializeObject(responseString);

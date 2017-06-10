@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Specialized;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace ProjectJ
 {
@@ -45,27 +46,26 @@ namespace ProjectJ
                 UserInfo.Add("login", "");
                 UserInfo.Add("username", UserMail.Text);
                 UserInfo.Add("password", UserPassword.Password);
-                byte[] login = client.UploadValues("http://localhost/", "POST", UserInfo);
-                var responseString = Encoding.Default.GetString(login);
-                responseString = responseString.Replace("\r", "").Replace("\n", "");
-                Label_message.Content = responseString;
-                switch (responseString)
+                byte[] response = client.UploadValues("http://localhost/", "POST", UserInfo);
+                String responseString = Encoding.UTF8.GetString(response);
+                dynamic stuff = JsonConvert.DeserializeObject(responseString);
+                String cases = stuff.msg;
+                switch (cases)
                 {
                     case "login successfully!":
                         {
                             Widgets wid = new Widgets();
                             Close();
+                            String tmp = stuff.uname;
+                            Widgets.setUname(tmp);
+                            tmp = stuff.upass;
+                            Widgets.setUpass(tmp);
                             wid.Show();
                             break;
                         }
                     case "Wrong Details!":
                         {
                             Label_message.Content = "Wrong Details!";
-                            break;
-                        }
-                    case "invalid username!":
-                        {
-                            Label_message.Content = "Invalid username! you can use letters, numbers and periods!";
                             break;
                         }
                     default:

@@ -14,6 +14,8 @@ namespace ProjectJ
     /// </summary>
     public partial class Widgets : Window
     {
+        private static String uname;
+        private static String upass;
 
         public Widgets()
         {
@@ -22,7 +24,28 @@ namespace ProjectJ
             InitializeComponent();
         }
 
- 
+
+        public static String getUname()
+        {
+            return uname;
+        }
+
+        public static String getUpass()
+        {
+            return upass;
+        }
+
+        public static void setUname(String u)
+        {
+            uname = u;
+        }
+
+        public static void setUpass(String p)
+        {
+            upass =  p;
+        }
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -74,5 +97,7 @@ namespace ProjectJ
             Photo_Album pa = new Photo_Album();
             pa.Show();
         }
+
+
     }
 }
