@@ -24,9 +24,8 @@ namespace ProjectJ
     /// </summary>
     public partial class Login : Window
     {
-        public static String server = "https://projectj.000webhostapp.com/";
+        public static String server = "http://52.58.165.64/";
         WebClient client = new WebClient();
-        WebException x;
         public Login()
         {
             this.Left = 450;

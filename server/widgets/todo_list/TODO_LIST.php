@@ -35,7 +35,7 @@ class TODO_LIST
                 $index = 1;
                 $arr = array();
                 while ($userRow = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $tmp = array('Task' => $userRow['task'], 'Date' => $userRow['task_date']);
+                    $tmp = array('taskid' => $userRow['task_id'], 'Task' => $userRow['task'], 'Date' => $userRow['task_date']);
                     $f = $str . $index;
                     $arr[$f] = $tmp;
                     ++$index;
@@ -56,34 +56,33 @@ class TODO_LIST
     {
         $stmt = $this->conn->prepare("INSERT INTO todo_list(task,task_date,user_name) VALUES(:tasks, :dates,'$this->user')");
         $stmt->bindparam(":tasks", $tasks);
-        $stmt->bindparam(":dates", $dates);
+        if ($dates != null)
+            $stmt->bindparam(":dates", $dates);
+        else {
+            $d = "1990-01-01";
+            $stmt->bindparam(":dates", $d);
+        }
         $stmt->execute();
         return $stmt;
 
 
     }
-    public function deleteTask($uname)
+    public function deleteTask($taskid)
     {
-        $stmt = $this->conn->prepare("DELETE FROM todo_list WHERE user_name='.$uname.'");
-        $sql="DELETE FROM todo_list WHERE user_id=4";
-        $query="DELETE from todo_list WHERE user_name=$uname";
-        $sql="DELETE FROM todo_list WHERE user_name=:uname";
-        echo "ccwcws";
-        return $sql;
-
-
+        $stmt = $this->conn->prepare("DELETE FROM `todo_list` WHERE `todo_list`.`task_id` = :taskid");
+        $stmt->bindparam(":taskid", $taskid);
+        $stmt->execute();
+        return $stmt;
     }
 
     public function run(){
-
-        $this->getTask();
+        if (isset($_POST['get_tasks']))
+            $this->getTask();
         if (isset($_POST['add'])) {
-         $task = trim($_POST['task']);
-         $d = trim($_POST['date']);
-         $this->addTask($task,$d);
+            $this->addTask($_POST['task'],$_POST['date']);
         }
-       if (isset($_POST['delete'])) {
-          $this->deleteTask(2);
+        if (isset($_POST['delete'])) {
+            $this->deleteTask($_POST['task_id']);
         }
     }
 }

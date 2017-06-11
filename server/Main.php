@@ -78,7 +78,7 @@ class Main
         }
         if (isset($_POST['music']))
         {
-            $m=new MUSIC();
+            $m = new MUSIC();
             $m->run();
         }
         if (isset($_POST['pa'])) {

@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 CREATE TABLE IF NOT EXISTS `todo_list` (
   `task_id` int(11) NOT NULL AUTO_INCREMENT,
-  `task` varchar(255) NOT NULL,
-  `task_date` DATE NOT NULL,
+  `task` varchar(255) NULL,
+  `task_date` DATE NULL,
   `user_name` varchar(15) NOT NULL,
   PRIMARY KEY (`task_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

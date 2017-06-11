@@ -39,6 +39,7 @@ namespace ProjectJ
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
+            todo_list.Add("todo_list", "");
             todo_list.Add("add", "");
             todo_list.Add("task", task.Text);
             String d = "" + dates.SelectedDate.Value.Year + "-" + dates.SelectedDate.Value.Month + "-" + dates.SelectedDate.Value.Day;

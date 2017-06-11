@@ -86,7 +86,7 @@ namespace ProjectJ
                 musicbrowser.Navigate(YourMusic.Text);
                 YourMusic.Text = "Enter Another YouTube Song!";
             }
-            catch (Exception Ex)
+            catch (UriFormatException)
             {
                 YourMusic.Text = "Please enter a valid YouTube URL";
             }
