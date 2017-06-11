@@ -58,7 +58,6 @@ class Main
                 $login->register($uname, $umail, $upass);
                 $arr['msg'] = "register successfully!";
             }
-            $arr['msg'] = $this->msg;
             echo json_encode($arr);
         }
         if (isset($_POST['daily_word'])) {

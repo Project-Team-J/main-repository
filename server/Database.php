@@ -2,9 +2,9 @@
 class Database
 {   
     private $host = "localhost";
-    private $db_name = "projectj";
-    private $username = "root";
-    private $password = "";
+    private $db_name = "id1933809_projectj";
+    private $username = "id1933809_root";
+    private $password = "ProjectJ132132";
     public $conn;
      
     public function dbConnection()
